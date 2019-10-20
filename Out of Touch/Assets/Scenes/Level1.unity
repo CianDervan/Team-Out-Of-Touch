@@ -509,7 +509,7 @@ Transform:
   m_LocalScale: {x: 10, y: 8, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &206967239
 GameObject:
@@ -615,7 +615,6 @@ GameObject:
   - component: {fileID: 255420073}
   - component: {fileID: 255420072}
   - component: {fileID: 255420071}
-  - component: {fileID: 255420074}
   - component: {fileID: 255420070}
   - component: {fileID: 255420069}
   - component: {fileID: 255420068}
@@ -768,9 +767,8 @@ Transform:
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-
 --- !u!1 &278434317
 GameObject:
   m_ObjectHideFlags: 0
@@ -792,13 +790,11 @@ GameObject:
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!114 &278434318
-
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-
   m_GameObject: {fileID: 278434317}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -880,7 +876,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-
 --- !u!1 &343999160 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4011635158655470878, guid: 1e0825258967c794fbdc33b199c8ae81,
@@ -1440,7 +1435,7 @@ Transform:
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &467063426
 MonoBehaviour:
@@ -1457,7 +1452,7 @@ MonoBehaviour:
   joystick: {fileID: 1544413170}
   veloRate: 8
   TouchField: {fileID: 1623218858}
-  CameraAngle: 0
+  CameraAngleX: 0
   CameraAngleSpeed: 0.2
   myRb: {fileID: 467063421}
 --- !u!1 &535464220 stripped
@@ -1578,7 +1573,7 @@ MonoBehaviour:
   joystick: {fileID: 1544413170}
   veloRate: 8
   TouchField: {fileID: 1623218858}
-  CameraAngle: 0
+  CameraAngleX: 0
   CameraAngleSpeed: 0.2
   myRb: {fileID: 553447260}
 --- !u!114 &553447263
@@ -1951,7 +1946,7 @@ MonoBehaviour:
   joystick: {fileID: 1544413170}
   veloRate: 8
   TouchField: {fileID: 1623218858}
-  CameraAngle: 0
+  CameraAngleX: 0
   CameraAngleSpeed: 0.2
   myRb: {fileID: 638501942}
 --- !u!95 &638501947
@@ -2036,7 +2031,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &675097937
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3688,7 +3683,7 @@ PrefabInstance:
     - target: {fileID: 2929252283123773939, guid: aaa2c939c0359ac4dbce3f49e8b90252,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252,
         type: 3}
@@ -4080,7 +4075,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 1e0825258967c794fbdc33b199c8ae81,
         type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 1e0825258967c794fbdc33b199c8ae81,
         type: 3}
@@ -4998,7 +4993,7 @@ Transform:
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1779669320
 MonoBehaviour:
@@ -5068,7 +5063,7 @@ MonoBehaviour:
   joystick: {fileID: 1544413170}
   veloRate: 8
   TouchField: {fileID: 1623218858}
-  CameraAngle: 0
+  CameraAngleX: 0
   CameraAngleSpeed: 0.2
   myRb: {fileID: 1779669315}
 --- !u!1 &1780490298 stripped
@@ -5826,7 +5821,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1834978791}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 74cff88abc016b941ae85e00e9e9a72c, type: 3}
   m_Name: 
@@ -5834,7 +5829,7 @@ MonoBehaviour:
   joystick: {fileID: 1544413170}
   veloRate: 50
   TouchField: {fileID: 1623218858}
-  CameraAngle: 0
+  CameraAngleX: 0
   CameraAngleSpeed: 0.2
   myRb: {fileID: 1834978830}
 --- !u!64 &1834978816
@@ -6218,7 +6213,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1834978796}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 42cacc72cb66bdb4abb5f751f9e568cc, type: 3}
   m_Name: 
@@ -6612,6 +6607,41 @@ ConstantForce:
   m_RelativeForce: {x: 0, y: 0, z: 0}
   m_Torque: {x: 0, y: 0, z: 0}
   m_RelativeTorque: {x: 0, y: 0, z: 0}
+--- !u!114 &1834978863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1834978788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74cff88abc016b941ae85e00e9e9a72c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  joystick: {fileID: 1544413170}
+  veloRate: 50
+  TouchField: {fileID: 1623218858}
+  CameraAngleX: 0
+  CameraAngleSpeed: 0.2
+  myRb: {fileID: 1834978804}
+--- !u!114 &1834978864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1834978796}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81fdb060c64e66b4c9d0bf0db43975b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myOriginHolder: {fileID: 0}
+  maxDistance: 5
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!1 &1841736044
 GameObject:
   m_ObjectHideFlags: 0
@@ -6828,7 +6858,7 @@ MonoBehaviour:
   joystick: {fileID: 1544413170}
   veloRate: 8
   TouchField: {fileID: 1623218858}
-  CameraAngle: 0
+  CameraAngleX: 0
   CameraAngleSpeed: 0.2
   myRb: {fileID: 1848739014}
 --- !u!144 &1848739012

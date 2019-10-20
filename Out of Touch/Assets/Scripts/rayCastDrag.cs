@@ -7,6 +7,8 @@ public class rayCastDrag : MonoBehaviour
     public GameObject greatGrandChildGrabbyHand;
     public GameObject emptyJointHolder;
 
+    private bool IsCarrying = false;
+
     public float maxDistance = 5f;
 
     [SerializeField]
@@ -41,7 +43,7 @@ public class rayCastDrag : MonoBehaviour
 
        // RaycastHit hitInfo;
 
-        if (Physics.Raycast(ray, out RaycastHit raycastHit, maxDistance, layerMask))
+        if (Physics.Raycast(ray, out RaycastHit raycastHit, maxDistance, layerMask) && IsCarrying == false)
         {
            
             raycastHit.collider.GetComponent<Renderer>().material.color = Color.green;
@@ -54,9 +56,15 @@ public class rayCastDrag : MonoBehaviour
             raycastHit.collider.gameObject.AddComponent<SpringJoint>();
             raycastHit.collider.GetComponent<SpringJoint>().connectedBody = GameObject.Find("Bone").GetComponent<Rigidbody>();
 
+            IsCarrying = true;
+
             // myOriginHolder.gameObject.AddComponent<FixedJoint>();
             // myOriginHolder.GetComponent<FixedJoint>().connectedBody = raycastHit.collider.GetComponent<Rigidbody>();
 
+        }
+        else
+        {
+            IsCarrying = false;
         }
 
        // bool result = Physics.Raycast(ray, out hitInfo, maxDistance);

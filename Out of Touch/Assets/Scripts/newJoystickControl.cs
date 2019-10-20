@@ -10,8 +10,8 @@ public class newJoystickControl : MonoBehaviour
     public float veloRate = 4.0f;
 
     public FixedTouchField TouchField;
-    public float CameraAngle;
-    
+    public float CameraAngleX;
+
     public float CameraAngleSpeed = 0.2f;
 
     public Rigidbody myRb;
@@ -47,9 +47,9 @@ public class newJoystickControl : MonoBehaviour
 
         //camera swipe
 
-        CameraAngle += TouchField.TouchDist.x * CameraAngleSpeed;
+        CameraAngleX += TouchField.TouchDist.x * CameraAngleSpeed;
        
-        Camera.main.transform.position = transform.parent.parent.position + Quaternion.AngleAxis(CameraAngle, Vector3.up) * new Vector3(0, 12, -18);
+        Camera.main.transform.position = transform.parent.parent.position + Quaternion.AngleAxis(CameraAngleX, Vector3.up) * new Vector3(0, 12, -18);
         Camera.main.transform.rotation = Quaternion.LookRotation(transform.parent.parent.position + Vector3.up * 2f - Camera.main.transform.position, Vector3.up);
         
 
