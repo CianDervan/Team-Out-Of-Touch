@@ -8,7 +8,7 @@ public class GrabbingScript : MonoBehaviour
 
     private ConstantForce ArmForce;
 
-    public Rigidbody CharacterRightArm;
+    public Rigidbody CharacterArm;
 
     private bool WantsToGrab = false;
 
