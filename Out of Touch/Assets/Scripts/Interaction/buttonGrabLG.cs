@@ -7,7 +7,7 @@ public class buttonGrabLG : MonoBehaviour
 {
     public GameObject item;
     public GameObject tempParent;
-    public GameObject springyHand;
+    public GameObject springyBody;
     public Transform guide;
     bool carrying;
     public float range = 5;
@@ -78,8 +78,21 @@ public class buttonGrabLG : MonoBehaviour
         item.transform.parent = tempParent.transform;
         item.GetComponent<BoxCollider>().enabled = false;
         guide.GetComponent<BoxCollider>().enabled = true;
+        guide.transform.localScale = item.transform.localScale;
+        showImage = true;
+        if (showImage) {
+           // StartCoroutine ("flashImage");
+            
+                StartCoroutine( ShowAndHide(imageToShow, 5.0f) ); 
+            
+        }
         
+        //imageToShow.enabled = (true);
+        //imageToShow.GetComponent<Blink>().enabled = true;
+       // myAudio.Play (); 
         
+
+
         /*if (showText) {
             StartCoroutine ("SetText");
         }
@@ -88,14 +101,14 @@ public class buttonGrabLG : MonoBehaviour
             myAudio.Play (); 
             
             if (showImage) {
-                imageToShow;
+                imageToShow.SetActive (true);
         }*/
-        
-        //item.AddComponent<FixedJoint>();
-        //item.GetComponent<FixedJoint>().connectedBody = springyHand.GetComponent<Rigidbody>();
-        //item.GetComponent<FixedJoint>().enablePreprocessing = false;
-        //item.GetComponent<SpringJoint>().spring = 750f;
-        
+
+        /*item.AddComponent<SpringJoint>();
+        item.GetComponent<SpringJoint>().connectedBody = springyBody.GetComponent<Rigidbody>();
+        item.GetComponent<SpringJoint>().enablePreprocessing = false;
+        item.GetComponent<SpringJoint>().spring = 750f;*/
+
     }
 
     public void drop()
@@ -110,7 +123,30 @@ public class buttonGrabLG : MonoBehaviour
         guide.GetComponent<BoxCollider>().enabled = false;
         item.GetComponent<BoxCollider>().enabled = true;
         item.GetComponent<Rigidbody>().mass = 5000;
+        //showImage = false;
+        StopCoroutine( ShowAndHide(imageToShow, 5.0f) );
+       
+    }
+    
+    IEnumerator flashImage(){
+        imageToShow.enabled = (true);
+        imageToShow.GetComponent<Blink>().enabled = true;
+        myAudio.Play (); 
+        yield return new WaitForSeconds(5f);
         
-        
+        showImage = false;
+    }
+    IEnumerator ShowAndHide( Image go, float delay )
+    {
+        go.enabled = (true);
+        //go.GetComponent<Blink>().enabled = (true);
+        //go.GetComponent<Blink>().StartBlink();
+        myAudio.Play ();
+        yield return new WaitForSeconds(delay);
+        //go.GetComponent<Blink>().StopBlink();
+        //showImage = false;
+        //StopCoroutine( ShowAndHide(imageToShow, 5.0f) ); 
+        //go.GetComponent<Blink>().isBlinking = false;
+       go.enabled = (false);
     }
 }

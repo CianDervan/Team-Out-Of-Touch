@@ -11,10 +11,12 @@ public class Rotate : MonoBehaviour {
     public float rotX;
     public float rotY;
     public float rotZ;
+    
 
     bool isSpinning = false;
     bool nowIwantToSpin = false;
     public Button spinButton;
+    public float factor;
 
     private void Start()
     {
@@ -67,6 +69,8 @@ public class Rotate : MonoBehaviour {
     {
 
         transform.Rotate(rotX, rotY, rotZ);// * GetComponent<Rigidbody>().velocity;
+       // float rotateSpeed = GetComponent<Rigidbody>().velocity.magnitude * factor;
+       // transform.Rotate(rotX, rotateSpeed * Time.deltaTime, rotZ);
         
     }
     

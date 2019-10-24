@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
     <e p="C:\Users\Jonathan\.Rider2019.2\system\extResources" t="IncludeRecursive" />
@@ -9,6 +9,7 @@
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="Blink.cs" t="Include" />
         <e p="Joystick Pack" t="Include">
           <e p="Examples" t="Include">
             <e p="JoystickPlayerExample.cs" t="Include" />
@@ -65,6 +66,8 @@
             <e p="SimplePickUp.cs" t="Include" />
             <e p="stayInPlace.cs" t="Include" />
           </e>
+          <e p="knowledgeEventSystem.cs" t="Include" />
+          <e p="knowledgeObserver.cs" t="Include" />
           <e p="Movement" t="Include">
             <e p="CharacterMovement.cs" t="Include" />
             <e p="newJoyRight.cs" t="Include" />
@@ -75,6 +78,7 @@
           </e>
           <e p="UI" t="Include">
             <e p="buttonHands.cs" t="Include" />
+            <e p="ColourLerp.cs" t="Include" />
             <e p="FixedButton.cs" t="Include" />
             <e p="FixedTouchField.cs" t="Include" />
           </e>
