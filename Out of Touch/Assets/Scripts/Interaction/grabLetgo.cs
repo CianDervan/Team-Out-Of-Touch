@@ -2,73 +2,68 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class objectManipulation : MonoBehaviour
+public class grabLetgo : MonoBehaviour
 {
-
+    public GameObject item;
     public GameObject tempParent;
     public Transform guide;
     bool carrying;
     public float range = 5;
-    public GameObject item;
-
-   // public Button grabButton;
-
-        void IgrabbedAnItem()
-    {
-
-
-
-
-    }
 
     void Start()
     {
         item.GetComponent<Rigidbody>().useGravity = true;
     }
+
     // Update is called once per frame
     void Update()
     {
         if (carrying == false)
         {
-            //if (Input.GetKeyDown(KeyCode.K) && (guide.transform.position - transform.position).sqrMagnitude < range * range)
-                if ((guide.transform.position - transform.position).sqrMagnitude < range * range)
-                {
-                //pickup();
+            if (Input.GetKeyDown(KeyCode.K) &&
+                (guide.transform.position - transform.position).sqrMagnitude < range * range)
+            {
+                pickup();
                 carrying = true;
-
-                Debug.Log("dragged");
-                this.GetComponent<Rigidbody>().mass = 1;
-                this.gameObject.AddComponent<FixedJoint>();
-                //this.GetComponent<FixedJoint>().connectedBody = FindObjectOfType<PlayableCharacter>().GetComponent<RigidBody>();
-                this.GetComponent<FixedJoint>().connectedBody = GameObject.Find("Destination").GetComponent<Rigidbody>(); 
             }
         }
         else if (carrying == true)
         {
             if (Input.GetKeyDown(KeyCode.K))
             {
-                //drop();
+                drop();
                 carrying = false;
-
-                Debug.Log("not dragged");
-                this.GetComponent<Rigidbody>().mass = 1000;
-                Destroy(this.gameObject.GetComponent<FixedJoint>());
             }
         }
     }
-    void pickup()
+
+   public void pickup()
     {
         item.GetComponent<Rigidbody>().useGravity = false;
         item.GetComponent<Rigidbody>().isKinematic = true;
         item.transform.position = guide.transform.position;
         item.transform.rotation = guide.transform.rotation;
         item.transform.parent = tempParent.transform;
+        item.GetComponent<BoxCollider>().enabled = false;
+        guide.GetComponent<BoxCollider>().enabled = true;
     }
-    void drop()
+
+   public void drop()
     {
         item.GetComponent<Rigidbody>().useGravity = true;
         item.GetComponent<Rigidbody>().isKinematic = false;
         item.transform.parent = null;
         item.transform.position = guide.transform.position;
+        //StartCoroutine ("ResetCollider");
+        guide.GetComponent<BoxCollider>().enabled = false;
+        item.GetComponent<BoxCollider>().enabled = true;
+        item.GetComponent<Rigidbody>().mass = 5000;
+        
     }
+
+   /* IEnumerator ResetCollider()
+    {
+        yield return new WaitForSeconds(3f);
+        //item.GetComponent<BoxCollider>().enabled = true;
+    }*/
 }
