@@ -43,8 +43,8 @@ public class newJoystickControl : MonoBehaviour
 
         // forward movement relative to camera direction
 
-        myRb.velocity = rightDirection * veloRate;
-       // myRb.AddForce(new Vector3(rightDirection.x, 0, rightDirection.z) * veloRate);
+        myRb.velocity = rightDirection * veloRate; //add arbitrary velocity method
+       // myRb.AddForce(new Vector3(rightDirection.x, 0, rightDirection.z) * veloRate);// slippery add force
 
         //camera swipe
 
