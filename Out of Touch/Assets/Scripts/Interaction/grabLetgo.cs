@@ -10,8 +10,14 @@ public class grabLetgo : MonoBehaviour
     bool carrying;
     public float range = 5;
 
+
+
+    private ShowKnowledge gLg_ShowKnowledge;
+
     void Start()
     {
+        gLg_ShowKnowledge = GetComponent<ShowKnowledge>();
+
         item.GetComponent<Rigidbody>().useGravity = true;
     }
 
@@ -35,6 +41,8 @@ public class grabLetgo : MonoBehaviour
                 carrying = false;
             }
         }
+
+
     }
 
    public void pickup()
@@ -46,6 +54,9 @@ public class grabLetgo : MonoBehaviour
         item.transform.parent = tempParent.transform;
         item.GetComponent<BoxCollider>().enabled = false;
         guide.GetComponent<BoxCollider>().enabled = true;
+
+        gLg_ShowKnowledge.KnowledgeIsAcquired(KnowledgeAcquired: true);
+        Debug.Log("Player is Carrying");
     }
 
    public void drop()

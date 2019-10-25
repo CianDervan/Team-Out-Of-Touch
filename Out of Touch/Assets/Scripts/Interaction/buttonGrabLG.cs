@@ -18,10 +18,15 @@ public class buttonGrabLG : MonoBehaviour
     public Image imageToShow;
     public AudioSource myAudio;
     public bool  showText, showImage, playAudio;
-    
+
+    private ShowKnowledge gLg_ShowKnowledge;
+    public GameObject KnowledgeSprite;
+
     // Start is called before the first frame update
     void Start()
     {
+        gLg_ShowKnowledge = KnowledgeSprite.GetComponent<ShowKnowledge>();
+
         //grabbyButton.onClick.AddListener(TaskOnClick);
         grabbyButton.onClick.AddListener(DoToggle);
         item.GetComponent<Rigidbody>().useGravity = true;
@@ -78,8 +83,15 @@ public class buttonGrabLG : MonoBehaviour
         item.transform.parent = tempParent.transform;
         item.GetComponent<BoxCollider>().enabled = false;
         guide.GetComponent<BoxCollider>().enabled = true;
-        
-        
+
+        gLg_ShowKnowledge.KnowledgeIsAcquired(KnowledgeAcquired: true);
+        Debug.Log("Player is Carrying");
+
+        //bGLG_ShowKnowledge.KnowledgeAcquired = true;
+        //KnowledgeAcquiredbGLG = true;
+
+        //Debug.Log("Player is Carrying");
+
         /*if (showText) {
             StartCoroutine ("SetText");
         }
@@ -90,12 +102,12 @@ public class buttonGrabLG : MonoBehaviour
             if (showImage) {
                 imageToShow;
         }*/
-        
+
         //item.AddComponent<FixedJoint>();
         //item.GetComponent<FixedJoint>().connectedBody = springyHand.GetComponent<Rigidbody>();
         //item.GetComponent<FixedJoint>().enablePreprocessing = false;
         //item.GetComponent<SpringJoint>().spring = 750f;
-        
+
     }
 
     public void drop()
