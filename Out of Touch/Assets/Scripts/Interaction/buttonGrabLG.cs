@@ -7,8 +7,13 @@ public class buttonGrabLG : MonoBehaviour
 {
     public GameObject item;
     public GameObject tempParent;
+<<<<<<< HEAD
     public GameObject springyBody;
     public Transform guide;
+=======
+    public GameObject springyHand;
+    public Transform guide;                                 //player position
+>>>>>>> 31b3d4a05fb41a691e105ccc254af6f3fb000dd3
     bool carrying;
     public float range = 5;
 
@@ -54,7 +59,7 @@ public class buttonGrabLG : MonoBehaviour
     public void DoToggle()
     {
         //Debug.Log("You have clicked the button!");
-        if (carrying == false && (guide.transform.position - transform.position).sqrMagnitude < range * range)
+        if (carrying == false && (guide.transform.position - transform.position).sqrMagnitude < range * range)                          //if distance from player to object is less than the range
         {
             pickup();
             carrying = true;
