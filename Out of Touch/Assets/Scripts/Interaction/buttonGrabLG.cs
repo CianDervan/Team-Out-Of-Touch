@@ -9,7 +9,7 @@ public class buttonGrabLG : MonoBehaviour
     public GameObject tempParent;
 
     public GameObject animSource;
-    
+
     public GameObject springyHand;
     public Transform guide;                                 //player position
     bool carrying;
@@ -17,14 +17,19 @@ public class buttonGrabLG : MonoBehaviour
 
     public Color originalColor;
     public Button grabbyButton;
-    
+
     public Image imageToShow;
     public AudioSource myAudio;
     public bool  showText, showImage, playAudio;
-    
+
+    private ShowKnowledge gLg_ShowKnowledge;
+    public GameObject KnowledgeSprite;
+
     // Start is called before the first frame update
     void Start()
     {
+        gLg_ShowKnowledge = KnowledgeSprite.GetComponent<ShowKnowledge>();
+
         //grabbyButton.onClick.AddListener(TaskOnClick);
         grabbyButton.onClick.AddListener(DoToggle);
         item.GetComponent<Rigidbody>().useGravity = true;
@@ -33,15 +38,15 @@ public class buttonGrabLG : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
-    
+
     void TaskOnClick()
     {
-        
+
         Debug.Log("You have clicked the button!");
-        
+
         if (carrying)
         {
             drop();
@@ -50,7 +55,7 @@ public class buttonGrabLG : MonoBehaviour
         {
             pickup();
         }
- 
+
     }
 
 
@@ -82,10 +87,10 @@ public class buttonGrabLG : MonoBehaviour
                 anim.SetBool("grabbing", !grabNow); //!isOpen);
             }
         }*/
-        
-        
+
+
         item.GetComponent<Renderer>().material.color = Color.green;
-        
+
         item.GetComponent<Rigidbody>().useGravity = false;
         item.GetComponent<Rigidbody>().isKinematic = true;
         item.transform.position = guide.transform.position;
@@ -95,7 +100,7 @@ public class buttonGrabLG : MonoBehaviour
         guide.GetComponent<BoxCollider>().enabled = true;
         guide.transform.localScale = item.transform.localScale;
         showImage = true;
-        if (showImage) 
+        if (showImage)
         {
             StartCoroutine( ShowAndHide(imageToShow, 5.0f) );
         }
@@ -104,6 +109,30 @@ public class buttonGrabLG : MonoBehaviour
         item.GetComponent<SpringJoint>().connectedBody = springyBody.GetComponent<Rigidbody>();
         item.GetComponent<SpringJoint>().enablePreprocessing = false;
         item.GetComponent<SpringJoint>().spring = 750f;*/
+
+        gLg_ShowKnowledge.KnowledgeIsAcquired(KnowledgeAcquired: true);
+        Debug.Log("Player is Carrying");
+
+        //bGLG_ShowKnowledge.KnowledgeAcquired = true;
+        //KnowledgeAcquiredbGLG = true;
+
+        //Debug.Log("Player is Carrying");
+
+        /*if (showText) {
+            StartCoroutine ("SetText");
+        }
+
+        if (playAudio) {
+            myAudio.Play ();
+
+            if (showImage) {
+                imageToShow;
+        }*/
+
+        //item.AddComponent<FixedJoint>();
+        //item.GetComponent<FixedJoint>().connectedBody = springyHand.GetComponent<Rigidbody>();
+        //item.GetComponent<FixedJoint>().enablePreprocessing = false;
+        //item.GetComponent<SpringJoint>().spring = 750f;
 
     }
 
@@ -118,10 +147,10 @@ public class buttonGrabLG : MonoBehaviour
                 anim.SetBool("grabbing", !grabNow); //!isOpen);
             }
         }*/
-        
-        
+
+
         item.GetComponent<Renderer>().material.color = originalColor;
-        
+
         item.GetComponent<Rigidbody>().useGravity = true;
         item.GetComponent<Rigidbody>().isKinematic = false;
         item.transform.parent = null;
@@ -132,7 +161,7 @@ public class buttonGrabLG : MonoBehaviour
         item.GetComponent<Rigidbody>().mass = 5000;
         //showImage = false;
         StopCoroutine( ShowAndHide(imageToShow, 5.0f) );
-       
+
     }
     IEnumerator ShowAndHide( Image go, float delay )
     {
