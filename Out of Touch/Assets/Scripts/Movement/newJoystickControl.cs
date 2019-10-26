@@ -24,15 +24,17 @@ public class newJoystickControl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        mainCam = Camera.main.transform;
-
-        myRb = GetComponent<Rigidbody>();
+        //if (mainCam != null)
+        //{
+            mainCam = Camera.main.transform;
+            myRb = GetComponent<Rigidbody>();
         //joystick = FindObjectOfType<Joystick>();
         //joybutton = FindObjectOfType<Joybutton>();
+       // }
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         // calculate camera relative direction
         CamForward = Vector3.Scale(mainCam.forward, new Vector3(1, 0, 1)).normalized;
@@ -44,7 +46,7 @@ public class newJoystickControl : MonoBehaviour
         // forward movement relative to camera direction
 
         myRb.velocity = rightDirection * veloRate; //add arbitrary velocity method
-       // myRb.AddForce(new Vector3(rightDirection.x, 0, rightDirection.z) * veloRate);// slippery add force
+       // myRb.AddForce(new Vector3(rightDirection.x, 0, rightDirection.z) * veloRate);// slippery add force method
 
         //camera swipe
 
