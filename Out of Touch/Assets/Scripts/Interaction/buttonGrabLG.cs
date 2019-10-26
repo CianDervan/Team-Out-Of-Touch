@@ -7,13 +7,11 @@ public class buttonGrabLG : MonoBehaviour
 {
     public GameObject item;
     public GameObject tempParent;
-<<<<<<< HEAD
-    public GameObject springyBody;
-    public Transform guide;
-=======
+
+    public GameObject animSource;
+    
     public GameObject springyHand;
     public Transform guide;                                 //player position
->>>>>>> 31b3d4a05fb41a691e105ccc254af6f3fb000dd3
     bool carrying;
     public float range = 5;
 
@@ -74,6 +72,18 @@ public class buttonGrabLG : MonoBehaviour
 
     public void pickup()
     {
+        /*if (item != null)
+        {
+           // animSource.get
+            Animator anim = animSource.GetComponent<Animator>();
+            if (anim != null)
+            {
+                bool grabNow = anim.GetBool("grabbing");
+                anim.SetBool("grabbing", !grabNow); //!isOpen);
+            }
+        }*/
+        
+        
         item.GetComponent<Renderer>().material.color = Color.green;
         
         item.GetComponent<Rigidbody>().useGravity = false;
@@ -85,29 +95,10 @@ public class buttonGrabLG : MonoBehaviour
         guide.GetComponent<BoxCollider>().enabled = true;
         guide.transform.localScale = item.transform.localScale;
         showImage = true;
-        if (showImage) {
-           // StartCoroutine ("flashImage");
-            
-                StartCoroutine( ShowAndHide(imageToShow, 5.0f) ); 
-            
+        if (showImage) 
+        {
+            StartCoroutine( ShowAndHide(imageToShow, 5.0f) );
         }
-        
-        //imageToShow.enabled = (true);
-        //imageToShow.GetComponent<Blink>().enabled = true;
-       // myAudio.Play (); 
-        
-
-
-        /*if (showText) {
-            StartCoroutine ("SetText");
-        }
-
-        if (playAudio) {
-            myAudio.Play (); 
-            
-            if (showImage) {
-                imageToShow.SetActive (true);
-        }*/
 
         /*item.AddComponent<SpringJoint>();
         item.GetComponent<SpringJoint>().connectedBody = springyBody.GetComponent<Rigidbody>();
@@ -118,6 +109,17 @@ public class buttonGrabLG : MonoBehaviour
 
     public void drop()
     {
+       /* if (item != null)
+        {
+            Animator anim = animSource.GetComponent<Animator>();
+            if (anim != null)
+            {
+                bool grabNow = anim.GetBool("grabbing");
+                anim.SetBool("grabbing", !grabNow); //!isOpen);
+            }
+        }*/
+        
+        
         item.GetComponent<Renderer>().material.color = originalColor;
         
         item.GetComponent<Rigidbody>().useGravity = true;
@@ -132,26 +134,11 @@ public class buttonGrabLG : MonoBehaviour
         StopCoroutine( ShowAndHide(imageToShow, 5.0f) );
        
     }
-    
-    IEnumerator flashImage(){
-        imageToShow.enabled = (true);
-        imageToShow.GetComponent<Blink>().enabled = true;
-        myAudio.Play (); 
-        yield return new WaitForSeconds(5f);
-        
-        showImage = false;
-    }
     IEnumerator ShowAndHide( Image go, float delay )
     {
         go.enabled = (true);
-        //go.GetComponent<Blink>().enabled = (true);
-        //go.GetComponent<Blink>().StartBlink();
         myAudio.Play ();
         yield return new WaitForSeconds(delay);
-        //go.GetComponent<Blink>().StopBlink();
-        //showImage = false;
-        //StopCoroutine( ShowAndHide(imageToShow, 5.0f) ); 
-        //go.GetComponent<Blink>().isBlinking = false;
-       go.enabled = (false);
+        go.enabled = (false);
     }
 }
