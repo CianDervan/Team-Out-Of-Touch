@@ -15,7 +15,7 @@ public class TouchInput : MonoBehaviour
     void Update()
     {
 
-#if UNITY_EDITOR
+#if UNITY_EDITOR                                    //this code activates only in editor so you can test in editor on a computer
 
         if (Input.GetMouseButton(0)||Input.GetMouseButtonDown(0)|| Input.GetMouseButtonUp(0))
         {
@@ -34,11 +34,11 @@ public class TouchInput : MonoBehaviour
                 {
                     recipient.SendMessage("OnTouchDown", hit.point, SendMessageOptions.DontRequireReceiver);
                 }
-                if (Input.GetMouseButton(0))
+                if (Input.GetMouseButtonUp(0))
                 {
                     recipient.SendMessage("OnTouchUp", hit.point, SendMessageOptions.DontRequireReceiver);
                 }
-                if (Input.GetMouseButtonUp(0))
+                if (Input.GetMouseButton(0))
                 {
                     recipient.SendMessage("OnTouchStay", hit.point, SendMessageOptions.DontRequireReceiver);
                 }
@@ -54,7 +54,7 @@ public class TouchInput : MonoBehaviour
             }*/
         }
 
-#endif
+#endif                          //this code only activates in an actual build of the game
 
         if (Input.touchCount > 0)
         {

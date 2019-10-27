@@ -5417,8 +5417,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 836d4218c9be75e41a8893c3e3bc9029, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultColor: {r: 1, g: 1, b: 1, a: 0}
-  selectedColor: {r: 1, g: 0, b: 0.908308, a: 0}
+  defaultColor: {r: 1, g: 0, b: 0.909804, a: 1}
+  selectedColor: {r: 1, g: 1, b: 1, a: 0}
+  ObjectIsTouched: 0
 --- !u!1 &1307812358
 GameObject:
   m_ObjectHideFlags: 0
