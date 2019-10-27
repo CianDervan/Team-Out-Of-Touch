@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class ButtonTouchInput : MonoBehaviour
 {
     public Color defaultColor;
@@ -12,34 +13,21 @@ public class ButtonTouchInput : MonoBehaviour
 
     private int ObjectIsTouchedCounter = 1;                         //if <0 object was touched, if >0 object is not touched
 
+    private ShowBasicKnowledge BTI_ShowBasicKnowledge;
+    public GameObject BasicKnowledgeSprite;
+
     void Start()
     {
         mat = GetComponent<Renderer>().material;
+
+        BTI_ShowBasicKnowledge = BasicKnowledgeSprite.GetComponent<ShowBasicKnowledge>();        
     }
 
     private void OnTouchDown()
     {
-        //mat.color = selectedColor;
-        //ObjectIsTouched = !ObjectIsTouched;
         ObjectIsTouchedCounter = ObjectIsTouchedCounter * -1;
-    }
 
-    void OnTouchUp()
-    {
-        //mat.color = defaultColor;
-        //ObjectIsTouched = !ObjectIsTouched;
-    }
-
-    void OnTouchStay()
-    {
-        //mat.color = selectedColor;
-        //ObjectIsTouched = true;
-    }
-
-    void OnTouchExit()
-    {
-        //mat.color = defaultColor;
-        //ObjectIsTouched = false;
+        BTI_ShowBasicKnowledge.BasicKnowledgeIsAcquired(BasicKnowledgeAcquired: true);
     }
 
     private void Update()

@@ -504,7 +504,7 @@ RectTransform:
   m_Children:
   - {fileID: 228729362}
   m_Father: {fileID: 1841736048}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -1862,7 +1862,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1841736048}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -3972,6 +3972,93 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 6814431780893711860}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &861737625
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 861737626}
+  - component: {fileID: 861737629}
+  - component: {fileID: 861737628}
+  - component: {fileID: 861737627}
+  m_Layer: 5
+  m_Name: KM_CatchmentArea_BasicKnowledge
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &861737626
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 861737625}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2.6414, y: 2.6414, z: 2.6414}
+  m_Children: []
+  m_Father: {fileID: 1841736048}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -636, y: -6}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &861737627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 861737625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bce6acc473f128f4f8c1e447b619d2be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  KnowledgeImage: {fileID: 861737628}
+--- !u!114 &861737628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 861737625}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: d69c52a5983a88a4ab55c15a93fba98a, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &861737629
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 861737625}
+  m_CullTransparentMesh: 0
 --- !u!1001 &894645776
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5230,8 +5317,8 @@ GameObject:
   - component: {fileID: 1296309172}
   - component: {fileID: 1296309171}
   - component: {fileID: 1296309170}
-  - component: {fileID: 1296309169}
   - component: {fileID: 1296309178}
+  - component: {fileID: 1296309169}
   m_Layer: 9
   m_Name: Item to grab (2)
   m_TagString: Untagged
@@ -5256,7 +5343,8 @@ MonoBehaviour:
   springyHand: {fileID: 849784747}
   guide: {fileID: 970363129}
   range: 5
-  originalColor: {r: 0, g: 0, b: 0, a: 0}
+  PickedUpColor: {r: 0.9987322, g: 1, b: 0, a: 0}
+  originalColor: {r: 1, g: 0, b: 0, a: 0}
   grabbyButton: {fileID: 1572878407}
   imageToShow: {fileID: 0}
   myAudio: {fileID: 0}
@@ -5417,9 +5505,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 836d4218c9be75e41a8893c3e3bc9029, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultColor: {r: 1, g: 0, b: 0.909804, a: 1}
+  defaultColor: {r: 0, g: 1, b: 0.225564, a: 1}
   selectedColor: {r: 1, g: 1, b: 1, a: 0}
-  ObjectIsTouched: 0
+  BasicKnowledgeSprite: {fileID: 861737625}
 --- !u!1 &1307812358
 GameObject:
   m_ObjectHideFlags: 0
@@ -8271,6 +8359,7 @@ MonoBehaviour:
   springyHand: {fileID: 0}
   guide: {fileID: 970363129}
   range: 5
+  PickedUpColor: {r: 0, g: 0, b: 0, a: 0}
   originalColor: {r: 0, g: 0, b: 0, a: 0}
   grabbyButton: {fileID: 1572878407}
   imageToShow: {fileID: 0}
@@ -10185,6 +10274,7 @@ RectTransform:
   - {fileID: 1572878406}
   - {fileID: 1324561351}
   - {fileID: 2074448753}
+  - {fileID: 861737626}
   - {fileID: 512783432}
   - {fileID: 114812170}
   m_Father: {fileID: 0}
@@ -11376,12 +11466,12 @@ GameObject:
   - component: {fileID: 2074448755}
   - component: {fileID: 2074448754}
   m_Layer: 5
-  m_Name: Sprite
+  m_Name: KM_CatchmentArea_AdvancedKnowledge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2074448753
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11421,7 +11511,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2074448752}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 

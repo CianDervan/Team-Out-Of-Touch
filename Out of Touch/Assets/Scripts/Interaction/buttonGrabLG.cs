@@ -12,7 +12,9 @@ public class buttonGrabLG : MonoBehaviour
     bool carrying;
     public float range = 5;
 
+    public Color PickedUpColor;
     public Color originalColor;
+    private Material BoxColor;
     public Button grabbyButton;
     
     public Image imageToShow;
@@ -86,11 +88,6 @@ public class buttonGrabLG : MonoBehaviour
 
         gLg_ShowKnowledge.KnowledgeIsAcquired(KnowledgeAcquired: true);
         Debug.Log("Player is Carrying");
-
-        //bGLG_ShowKnowledge.KnowledgeAcquired = true;
-        //KnowledgeAcquiredbGLG = true;
-
-        //Debug.Log("Player is Carrying");
 
         /*if (showText) {
             StartCoroutine ("SetText");
