@@ -91,20 +91,20 @@ public class buttonGrabLG : MonoBehaviour
 
 
         item.GetComponent<Renderer>().material.color = Color.green;
-
-        item.GetComponent<Rigidbody>().useGravity = false;
-        item.GetComponent<Rigidbody>().isKinematic = true;
-        item.transform.position = guide.transform.position;
-        item.transform.rotation = guide.transform.rotation;
-        item.transform.parent = tempParent.transform;
-        item.GetComponent<BoxCollider>().enabled = false;
-        guide.GetComponent<BoxCollider>().enabled = true;
-        guide.transform.localScale = item.transform.localScale;
-        showImage = true;
-        if (showImage)
-        {
-            StartCoroutine( ShowAndHide(imageToShow, 5.0f) );
-        }
+         
+                 item.GetComponent<Rigidbody>().useGravity = false;
+                 item.GetComponent<Rigidbody>().isKinematic = true;
+                 item.transform.position = guide.transform.position;
+                 item.transform.rotation = guide.transform.rotation;
+                 item.transform.parent = tempParent.transform;
+                 item.GetComponent<BoxCollider>().enabled = false;
+                 guide.GetComponent<BoxCollider>().enabled = true;
+                 guide.transform.localScale = item.transform.localScale;
+                 showImage = true;
+                 if (showImage)
+                 {
+                     StartCoroutine( ShowAndHide(imageToShow, 5.0f) );
+                 }
 
         /*item.AddComponent<SpringJoint>();
         item.GetComponent<SpringJoint>().connectedBody = springyBody.GetComponent<Rigidbody>();

@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Tank
+  - Interactable
+  - Catchment
+  - Suction
+  - Storage
+  - Rooftop
   layers:
   - Default
   - TransparentFX
@@ -18,7 +23,7 @@ TagManager:
   - Interactables
   - TouchInput
   - NoSelfCollision
-  - 
+  - Ground
   - 
   - 
   - 

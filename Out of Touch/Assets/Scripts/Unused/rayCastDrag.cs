@@ -43,7 +43,7 @@ public class rayCastDrag : MonoBehaviour
     private void Raycast()
     {
         Vector3 origin = myOriginHolder.transform.position;
-        Vector3 direction = myOriginHolder.transform.forward * -1;
+        Vector3 direction = myOriginHolder.transform.forward;// * -1;
 
         // Debug.Log(myOriginHolder.transform.position);
 
@@ -58,7 +58,7 @@ public class rayCastDrag : MonoBehaviour
 
             //makeConnection();
 
-            raycastHit.collider.GetComponent<Rigidbody>().mass = 30;
+            raycastHit.collider.GetComponent<Rigidbody>().mass = 10;
             raycastHit.collider.GetComponent<Rigidbody>().useGravity = true;
             raycastHit.collider.GetComponent<Rigidbody>().isKinematic = false;
             //raycastHit.collider.gameObject.AddComponent<FixedJoint>();

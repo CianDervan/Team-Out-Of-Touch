@@ -11,6 +11,11 @@
           <e p="Interaction" t="Include">
             <e p="buttonGrabLG.cs" t="Include" />
             <e p="ButtonTouchInput.cs" t="Include" />
+            <e p="ColGrabNRelease.cs" t="Include" />
+            <e p="CollisionGrab.cs" t="Include" />
+            <e p="KnowGrab.cs" t="Include" />
+            <e p="NewJointGrab.cs" t="Include" />
+            <e p="RaiseHands.cs" t="Include" />
             <e p="SnapObject.cs" t="Include" />
             <e p="stayInPlace.cs" t="Include" />
           </e>
@@ -29,10 +34,15 @@
             <e p="ResumeButton.cs" t="Include" />
           </e>
           <e p="Movement" t="Include">
+            <e p="JointFollowAnimRot.cs" t="Include" />
             <e p="newJoystickControl.cs" t="Include" />
+            <e p="Player.cs" t="Include" />
+            <e p="PlayerCollider.cs" t="Include" />
             <e p="PlayerController.cs" t="Include" />
             <e p="Rotate.cs" t="Include" />
+            <e p="SelfBalance.cs" t="Include" />
             <e p="smoothCamFollow.cs" t="Include" />
+            <e p="SphereCaster.cs" t="Include" />
           </e>
           <e p="UI" t="Include">
             <e p="ColourLerp.cs" t="Include" />

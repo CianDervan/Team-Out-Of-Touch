@@ -19,7 +19,8 @@ public class PlayerController : MonoBehaviour
 
     void Awake()
     {
-        upright = true;
+        //upright = true;
+        upright = false;
     }
 
     void Start()
@@ -68,6 +69,8 @@ public class PlayerController : MonoBehaviour
                 uprightforces[1].enabled = false; // head
                 uprightforces[2].enabled = false; // torso
                 uprightforces[3].enabled = false; // hips
+               // COMConnector.GetComponent<FixedJoint>().connectedBody = null;
+                hips.GetComponent<SpringJoint>().connectedBody = null;
             }
 
             if (Input.GetKey(KeyCode.W))

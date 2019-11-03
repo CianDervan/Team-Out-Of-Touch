@@ -62,7 +62,7 @@ public class rayGrabFinal : MonoBehaviour
 
             //raycastHit.collider.GetComponent<Collider>().GetComponent<Renderer>().material.color = Color.green;
 
-            greatGrandChildGrabbyHand = this.gameObject.transform.GetChild(2).GetChild(2).GetChild(0).gameObject;// change this if code in hand
+            //greatGrandChildGrabbyHand = this.gameObject.transform.GetChild(2).GetChild(2).GetChild(0).gameObject;// change this if code in hand
 
             Vector3 pointOfConnection = new Vector3(greatGrandChildGrabbyHand.transform.position.x - raycastHit.collider.GetComponent<Collider>().gameObject.transform.position.x,
                                                     greatGrandChildGrabbyHand.transform.position.y - raycastHit.collider.GetComponent<Collider>().gameObject.transform.position.y,
