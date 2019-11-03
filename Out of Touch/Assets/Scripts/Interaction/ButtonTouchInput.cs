@@ -8,28 +8,36 @@ public class ButtonTouchInput : MonoBehaviour
     public Color selectedColor;
     private Material mat;
 
+    private bool ObjectIsTouched = false;
+
+    private int ObjectIsTouchedCounter = 1;                         //if <0 object was touched, if >0 object is not touched
+
+    private ShowBasicKnowledge BTI_ShowBasicKnowledge;
+    public GameObject BasicKnowledgeSprite;
+
     void Start()
     {
         mat = GetComponent<Renderer>().material;
+
+        BTI_ShowBasicKnowledge = BasicKnowledgeSprite.GetComponent<ShowBasicKnowledge>();
     }
 
-    void OnTouchDown()
+    private void OnTouchDown()
     {
-        mat.color = selectedColor;
+        ObjectIsTouchedCounter = ObjectIsTouchedCounter * -1;
+
+        BTI_ShowBasicKnowledge.BasicKnowledgeIsAcquired(BasicKnowledgeAcquired: true);
     }
 
-    void OnTouchUp()
+    private void Update()
     {
-        mat.color = defaultColor;
-    }
-
-    void OnTouchStay()
-    {
-        mat.color = selectedColor;
-    }
-
-    void OnTouchExit()
-    {
-        mat.color = defaultColor;
+        if (ObjectIsTouchedCounter > 0)
+        {
+            mat.color = selectedColor;
+        }
+        if (ObjectIsTouchedCounter < 0)
+        {
+            mat.color = defaultColor;
+        }
     }
 }
