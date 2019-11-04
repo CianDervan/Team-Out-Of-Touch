@@ -87,23 +87,17 @@ public class KnowGrab : MonoBehaviour{
                     //objectToGrab.GetComponent<Rigidbody>().velocity = myRb.velocity;
                     //objectToGrab.GetComponent<Rigidbody>().AddForce(myRb.velocity);
 
-                    showImage = true;
-                    if (showImage)
-                    {
-                        StartCoroutine(ShowAndHide(imageToShow, 5.0f));
-                    }
-
-                   bool iHaveNotBeenCollected = true;
-                   
-                   /* bool iHaveNotBeenCollectedOne;// = true;
-                    bool iHaveNotBeenCollectedTwo;// = true;//, updateImageTwo = true;
-                    bool iHaveNotBeenCollectedThree;// = true;//, updateImageThree = true;
-                    bool iHaveNotBeenCollectedFour;// = true;//, updateImageFour = true;*/
+                    bool iHaveNotBeenCollected = true;
 
                    if (iHaveNotBeenCollected) // && iHaveNotBeenCollectedTwo && iHaveNotBeenCollectedThree && iHaveNotBeenCollectedFour)
                    {
                        imageToSetActiveOne.SetActive(true);
                        imageToSetInactiveOne.SetActive(false);
+                       showImage = true;
+                       if (showImage)
+                       {
+                           StartCoroutine(ShowAndHide(imageToShow, 5.0f));
+                       }
                        iHaveNotBeenCollected = false;
                    }
 
@@ -111,9 +105,7 @@ public class KnowGrab : MonoBehaviour{
                 }
             }
         }
-   // }
-    
-            if (other.gameObject.CompareTag("Storage"))
+        if (other.gameObject.CompareTag("Storage"))
         {
             objectToGrab = other.gameObject;
             originalColor = objectToGrab.gameObject.GetComponent<Renderer>().material.color;
@@ -123,6 +115,7 @@ public class KnowGrab : MonoBehaviour{
                 if (!carrying)
                 {
                     FixedJoint grabJoint = objectToGrab.AddComponent<FixedJoint>();
+                    myHips.GetComponent<Rigidbody>().freezeRotation = true;
                     //SpringJoint grabJoint = objectToGrab.AddComponent<SpringJoint>();
                     grabJoint.connectedBody = myRb;
                     grabJoint.breakForce = Single.PositiveInfinity;
@@ -138,24 +131,18 @@ public class KnowGrab : MonoBehaviour{
                     //objectToGrab.GetComponent<Rigidbody>().velocity = myRb.velocity;
                     objectToGrab.GetComponent<Rigidbody>().AddForce(myRb.velocity - objectToGrab.GetComponent<Rigidbody>().velocity
                                                                     / (objectToGrab.GetComponent<Rigidbody>().mass * Time.deltaTime));
-                    
-                    showImage = true;
-                    if (showImage)
-                    {
-                        StartCoroutine(ShowAndHide(imageToShow, 5.0f));
-                    }
 
-                   bool iHaveNotBeenCollected = true;
-                   
-                   /* bool iHaveNotBeenCollectedOne;// = true;
-                    bool iHaveNotBeenCollectedTwo;// = true;//, updateImageTwo = true;
-                    bool iHaveNotBeenCollectedThree;// = true;//, updateImageThree = true;
-                    bool iHaveNotBeenCollectedFour;// = true;//, updateImageFour = true;*/
+                    bool iHaveNotBeenCollected = true;
 
                    if (iHaveNotBeenCollected) // && iHaveNotBeenCollectedTwo && iHaveNotBeenCollectedThree && iHaveNotBeenCollectedFour)
                    {
                        imageToSetActiveTwo.SetActive(true);
                        imageToSetInactiveTwo.SetActive(false);
+                       showImage = true;
+                       if (showImage)
+                       {
+                           StartCoroutine(ShowAndHide(imageToShow, 5.0f));
+                       }
                        iHaveNotBeenCollected = false;
                    }
 
@@ -163,9 +150,7 @@ public class KnowGrab : MonoBehaviour{
                 }
             }
         }
-   // }
-    
-            if (other.gameObject.CompareTag("Catchment"))
+        if (other.gameObject.CompareTag("Catchment"))
         {
             objectToGrab = other.gameObject;
             originalColor = objectToGrab.gameObject.GetComponent<Renderer>().material.color;
@@ -175,6 +160,7 @@ public class KnowGrab : MonoBehaviour{
                 if (!carrying)
                 {
                     FixedJoint grabJoint = objectToGrab.AddComponent<FixedJoint>();
+                    myHips.GetComponent<Rigidbody>().freezeRotation = true;
                     //SpringJoint grabJoint = objectToGrab.AddComponent<SpringJoint>();
                     grabJoint.connectedBody = myRb;
                     grabJoint.breakForce = Single.PositiveInfinity;
@@ -190,24 +176,18 @@ public class KnowGrab : MonoBehaviour{
                     //objectToGrab.GetComponent<Rigidbody>().velocity = myRb.velocity;
                     objectToGrab.GetComponent<Rigidbody>().AddForce(myRb.velocity - objectToGrab.GetComponent<Rigidbody>().velocity
                                                                     / (objectToGrab.GetComponent<Rigidbody>().mass * Time.deltaTime));
-                    
-                    showImage = true;
-                    if (showImage)
-                    {
-                        StartCoroutine(ShowAndHide(imageToShow, 5.0f));
-                    }
 
-                   bool iHaveNotBeenCollected = true;
-                   
-                   /* bool iHaveNotBeenCollectedOne;// = true;
-                    bool iHaveNotBeenCollectedTwo;// = true;//, updateImageTwo = true;
-                    bool iHaveNotBeenCollectedThree;// = true;//, updateImageThree = true;
-                    bool iHaveNotBeenCollectedFour;// = true;//, updateImageFour = true;*/
+                    bool iHaveNotBeenCollected = true;
 
-                   if (iHaveNotBeenCollected) // && iHaveNotBeenCollectedTwo && iHaveNotBeenCollectedThree && iHaveNotBeenCollectedFour)
+                    if (iHaveNotBeenCollected) // && iHaveNotBeenCollectedTwo && iHaveNotBeenCollectedThree && iHaveNotBeenCollectedFour)
                    {
                        imageToSetActiveThree.SetActive(true);
                        imageToSetInactiveThree.SetActive(false);
+                       showImage = true;
+                       if (showImage)
+                       {
+                           StartCoroutine(ShowAndHide(imageToShow, 5.0f));
+                       }
                        iHaveNotBeenCollected = false;
                    }
 
@@ -215,8 +195,7 @@ public class KnowGrab : MonoBehaviour{
                 }
             }
         }
-            
-                    if (other.gameObject.CompareTag("Suction"))
+        if (other.gameObject.CompareTag("Suction"))
         {
             objectToGrab = other.gameObject;
             originalColor = objectToGrab.gameObject.GetComponent<Renderer>().material.color;
@@ -226,6 +205,7 @@ public class KnowGrab : MonoBehaviour{
                 if (!carrying)
                 {
                     FixedJoint grabJoint = objectToGrab.AddComponent<FixedJoint>();
+                    myHips.GetComponent<Rigidbody>().freezeRotation = true;
                     //SpringJoint grabJoint = objectToGrab.AddComponent<SpringJoint>();
                     grabJoint.connectedBody = myRb;
                     grabJoint.breakForce = Single.PositiveInfinity;
@@ -241,24 +221,18 @@ public class KnowGrab : MonoBehaviour{
                    //objectToGrab.GetComponent<Rigidbody>().velocity = myRb.velocity;
                    objectToGrab.GetComponent<Rigidbody>().AddForce(myRb.velocity - objectToGrab.GetComponent<Rigidbody>().velocity
                                                                    / (objectToGrab.GetComponent<Rigidbody>().mass * Time.deltaTime));
-                    
-                    showImage = true;
-                    if (showImage)
-                    {
-                        StartCoroutine(ShowAndHide(imageToShow, 5.0f));
-                    }
 
                    bool iHaveNotBeenCollected = true;
-                   
-                   /* bool iHaveNotBeenCollectedOne;// = true;
-                    bool iHaveNotBeenCollectedTwo;// = true;//, updateImageTwo = true;
-                    bool iHaveNotBeenCollectedThree;// = true;//, updateImageThree = true;
-                    bool iHaveNotBeenCollectedFour;// = true;//, updateImageFour = true;*/
 
                    if (iHaveNotBeenCollected) // && iHaveNotBeenCollectedTwo && iHaveNotBeenCollectedThree && iHaveNotBeenCollectedFour)
                    {
                        imageToSetActiveFour.SetActive(true);
                        imageToSetInactiveFour.SetActive(false);
+                       showImage = true;
+                       if (showImage)
+                       {
+                           StartCoroutine(ShowAndHide(imageToShow, 5.0f));
+                       }
                        iHaveNotBeenCollected = false;
                    }
 
@@ -272,20 +246,22 @@ public class KnowGrab : MonoBehaviour{
 
                         if (holdOnTight != null)
                         {
-                            //if (!carrying)
-                            // {
-
-                            transform.parent = other.transform;
-                            FixedJoint grabJoint = thisObject.AddComponent<FixedJoint>();
-                            //SpringJoint grabJoint = objectToGrab.AddComponent<SpringJoint>();
-                            grabJoint.connectedBody = holdOnTight.GetComponent<Rigidbody>();
-                            grabJoint.breakForce = Single.PositiveInfinity;
-                            grabJoint.enablePreprocessing = false;
-                            //grabJoint.spring = 750f;
-                            //objectToGrab.GetComponent<SpringJoint>().damper = 100f;
-                            //holdOnTight.GetComponent<Rigidbody>().mass = immovableMass;
-                            // objectToGrab.GetComponent<Rigidbody>().useGravity = true;
-                            // objectToGrab.GetComponent<Rigidbody>().isKinematic = false;
+                            if (!carrying)
+                            {
+                                transform.parent = other.transform;
+                                FixedJoint grabJoint = thisObject.AddComponent<FixedJoint>();
+                                myHips.GetComponent<Rigidbody>().freezeRotation = true;
+                                //SpringJoint grabJoint = objectToGrab.AddComponent<SpringJoint>();
+                                grabJoint.connectedBody = holdOnTight.GetComponent<Rigidbody>();
+                                grabJoint.breakForce = Single.PositiveInfinity;
+                                grabJoint.enablePreprocessing = false;
+                                //grabJoint.spring = 750f;
+                                //objectToGrab.GetComponent<SpringJoint>().damper = 100f;
+                                //holdOnTight.GetComponent<Rigidbody>().mass = immovableMass;
+                                // objectToGrab.GetComponent<Rigidbody>().useGravity = true;
+                                // objectToGrab.GetComponent<Rigidbody>().isKinematic = false;
+                                carrying = true;
+                            }
                         }
                     }
     }
