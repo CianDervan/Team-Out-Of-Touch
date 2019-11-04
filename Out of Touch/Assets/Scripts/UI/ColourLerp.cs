@@ -18,20 +18,36 @@ public class ColourLerp : MonoBehaviour {
 
 		void Update()
 		{
-			//GetComponent<Renderer>().material.color = Color.Lerp(c[0], c[1], t);
-			GetComponent<Image>().color = Color.Lerp(c[0], c[1], t);
-			if(!change)
-				t+=i;
-			else
-				t-=i;
-			if(t>=1)
-				change = true;
-			if(t<=0)
-				change = false;
+			if (GetComponent<MeshRenderer>() != null)
+			{
+				GetComponent<MeshRenderer>().material.color = Color.Lerp(c[0], c[1], t);
+				//GetComponent<Image>().color = Color.Lerp(c[0], c[1], t);
+				if (!change)
+					t += i;
+				else
+					t -= i;
+				if (t >= 1)
+					change = true;
+				if (t <= 0)
+					change = false;
+			}
+			else if (GetComponent<Image>() != null)
+			{
+				//GetComponent<MeshRenderer>().material.color = Color.Lerp(c[0], c[1], t);
+				GetComponent<Image>().color = Color.Lerp(c[0], c[1], t);
+				if (!change)
+					t += i;
+				else
+					t -= i;
+				if (t >= 1)
+					change = true;
+				if (t <= 0)
+					change = false;
+			}
 
-		/*if (PauseMenu.gameIsPaused) 
-		{
-			t = 0;
-		}*/
+			/*if (PauseMenu.gameIsPaused) 
+			{
+				t = 0;
+			}*/
 		}
 	}

@@ -10,6 +10,8 @@ public class KnowGrab : MonoBehaviour{
     
     public GameObject thisObject;
     public GameObject objectToGrab;
+    public GameObject myHips;
+   // public GameObject myOtherHand;
     public GameObject animSource;
 
     public GameObject holdOnTight;
@@ -62,8 +64,12 @@ public class KnowGrab : MonoBehaviour{
                 if (!carrying)
                 {
                     FixedJoint grabJoint = objectToGrab.AddComponent<FixedJoint>();
+                    myHips.GetComponent<Rigidbody>().freezeRotation = true;
+                    //ConfigurableJoint grabJointTwo = objectToGrab.AddComponent<ConfigurableJoint>();
                     //SpringJoint grabJoint = objectToGrab.AddComponent<SpringJoint>();
                     grabJoint.connectedBody = myRb;
+                   // grabJointTwo.connectedBody = myOtherHand.GetComponent<Rigidbody>();
+                   // grabJointTwo.projectionMode = JointProjectionMode.PositionAndRotation;
                     grabJoint.breakForce = Single.PositiveInfinity;
                     grabJoint.enablePreprocessing = false;
                     //grabJoint.spring = 750f;
@@ -291,6 +297,8 @@ public class KnowGrab : MonoBehaviour{
             if (thisObject.GetComponent<SphereCollider>().enabled == false && carrying)//(objectToGrab.CompareTag("Interactable"))
             {
                 Destroy(objectToGrab.GetComponent<FixedJoint>());
+                myHips.GetComponent<Rigidbody>().freezeRotation = false;
+                //Destroy(objectToGrab.GetComponent<ConfigurableJoint>());
                 //Destroy(objectToGrab.GetComponent<SpringJoint>());
 
                 objectToGrab.GetComponent<Rigidbody>().mass = immovableMass; //5000;
