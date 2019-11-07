@@ -5,7 +5,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class KnowGrab : MonoBehaviour
+public class KGrabNew : MonoBehaviour
 {
 
    // public SphereCaster enabledForcesManager;
@@ -32,6 +32,11 @@ public class KnowGrab : MonoBehaviour
     public AudioSource myAudio;
     public Image imageToShow;
     public Color originalColor;
+    
+    public RawImage flyOverOne;
+    public RawImage flyOverTwo;
+    public RawImage flyOverThree;
+    public RawImage flyOverFour;
 
     public GameObject imageToSetActiveOne;
     public GameObject imageToSetInactiveOne;
