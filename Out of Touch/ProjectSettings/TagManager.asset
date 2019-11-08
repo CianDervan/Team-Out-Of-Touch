@@ -10,6 +10,7 @@ TagManager:
   - Suction
   - Storage
   - Rooftop
+  - sidetoside
   layers:
   - Default
   - TransparentFX
