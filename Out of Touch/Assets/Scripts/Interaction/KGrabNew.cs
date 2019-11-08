@@ -53,10 +53,10 @@ public class KGrabNew : MonoBehaviour
     public bool showImage;
     public bool carrying;
  
-   /* public bool iHaveNotBeenCollectedOne;// = true;
-    public bool iHaveNotBeenCollectedTwo;// = true;//, updateImageTwo = true;
-    public bool iHaveNotBeenCollectedThree;// = true;//, updateImageThree = true;
-    public bool iHaveNotBeenCollectedFour;// = true;//, updateImageFour = true;*/
+    public bool iHaveNotBeenCollectedRooftop;// = true;
+    public bool iHaveNotBeenCollectedStorage;// = true;//, updateImageTwo = true;
+    public bool iHaveNotBeenCollectedCatchment;// = true;//, updateImageThree = true;
+    public bool iHaveNotBeenCollectedSuction;// = true;//, updateImageFour = true;
 
     public int immovableMass;
     public int moveableMass;
@@ -79,7 +79,7 @@ public class KGrabNew : MonoBehaviour
 
             if (objectToGrab != null)
             {
-                if (!carrying)
+                if (!carrying && iHaveNotBeenCollectedRooftop)//(!carrying)
                 {
                     FixedJoint grabJoint = objectToGrab.AddComponent<FixedJoint>();
                     myHips.GetComponent<Rigidbody>().freezeRotation = true;
@@ -100,13 +100,12 @@ public class KGrabNew : MonoBehaviour
                     objectToGrab.GetComponent<Rigidbody>().isKinematic = false;
                     objectToGrab.GetComponent<Rigidbody>().freezeRotation = true;
                     //object.Addforce (player.v - object.v)/(object.mass*∆t)
-                    
                     objectToGrab.GetComponent<Rigidbody>().AddForce(myRb.velocity - objectToGrab.GetComponent<Rigidbody>().velocity
                                                                     / (objectToGrab.GetComponent<Rigidbody>().mass * Time.deltaTime));
                     //objectToGrab.GetComponent<Rigidbody>().velocity = myRb.velocity;
                     //objectToGrab.GetComponent<Rigidbody>().AddForce(myRb.velocity);
 
-                    bool iHaveNotBeenCollected = true;
+                    /*bool iHaveNotBeenCollected = true;
 
                    if (iHaveNotBeenCollected) // && iHaveNotBeenCollectedTwo && iHaveNotBeenCollectedThree && iHaveNotBeenCollectedFour)
                    {
@@ -118,9 +117,36 @@ public class KGrabNew : MonoBehaviour
                            StartCoroutine(ShowAndHide(imageToShow, 5.0f));
                        }
                        iHaveNotBeenCollected = false;
-                   }
+                   }*/
+                    imageToSetActiveOne.SetActive(true);
+                    imageToSetInactiveOne.SetActive(false);
+                    showImage = true;
+                    if (showImage)
+                    {
+                        StartCoroutine(ShowAndHide(imageToShow, 5.0f));
+                    }
 
                    carrying = true;
+                   iHaveNotBeenCollectedRooftop = false;
+                }
+
+                if (!carrying && !iHaveNotBeenCollectedRooftop)
+                {
+                    FixedJoint grabJoint = objectToGrab.AddComponent<FixedJoint>();
+                    myHips.GetComponent<Rigidbody>().freezeRotation = true;
+                    myTorso.GetComponent<Rigidbody>().freezeRotation = true;
+                    grabJoint.connectedBody = myRb;
+                    grabJoint.breakForce = Single.PositiveInfinity;
+                    grabJoint.enablePreprocessing = false;
+                    objectToGrab.GetComponent<Renderer>().material.color = Color.green;
+                    objectToGrab.GetComponent<Rigidbody>().mass = moveableMass;
+                    objectToGrab.GetComponent<Rigidbody>().useGravity = true;
+                    objectToGrab.GetComponent<Rigidbody>().isKinematic = false;
+                    objectToGrab.GetComponent<Rigidbody>().freezeRotation = true;
+                    objectToGrab.GetComponent<Rigidbody>().AddForce(myRb.velocity - objectToGrab.GetComponent<Rigidbody>().velocity
+                                                                    / (objectToGrab.GetComponent<Rigidbody>().mass * Time.deltaTime));
+                    carrying = true;
+                    
                 }
             }
         }

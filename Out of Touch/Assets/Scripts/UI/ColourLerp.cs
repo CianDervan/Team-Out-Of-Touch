@@ -20,8 +20,10 @@ public class ColourLerp : MonoBehaviour {
 		{
 			if (GetComponent<MeshRenderer>() != null)
 			{
-				GetComponent<MeshRenderer>().material.color = Color.Lerp(c[0], c[1], t);
+				//.SetColor("_BaseColor", - when using LWRPipeline.
+				//GetComponent<MeshRenderer>().material.color = Color.Lerp(c[0], c[1], t);
 				//GetComponent<Image>().color = Color.Lerp(c[0], c[1], t);
+				GetComponent<MeshRenderer>().material.SetColor("_BaseColor", Color.Lerp(c[0], c[1], t));
 				if (!change)
 					t += i;
 				else

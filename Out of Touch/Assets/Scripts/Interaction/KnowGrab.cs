@@ -8,6 +8,10 @@ using UnityEngine.UI;
 public class KnowGrab : MonoBehaviour
 {
 
+    public GameObject myFlyOCameraOne;
+    public GameObject myFlyOCameraTwo;
+    public GameObject myFlyOCameraThree;
+    public GameObject myFlyOCameraFour;
    // public SphereCaster enabledForcesManager;
     private Rigidbody myRb;
     
@@ -32,6 +36,11 @@ public class KnowGrab : MonoBehaviour
     public AudioSource myAudio;
     public Image imageToShow;
     public Color originalColor;
+    
+    public RawImage flyOverOne;
+    public RawImage flyOverTwo;
+    public RawImage flyOverThree;
+    public RawImage flyOverFour;
 
     public GameObject imageToSetActiveOne;
     public GameObject imageToSetInactiveOne;
@@ -46,12 +55,13 @@ public class KnowGrab : MonoBehaviour
     public GameObject imageToSetInactiveFour;
     
     public bool showImage;
+    public bool showRawImage;
     public bool carrying;
  
-   /* public bool iHaveNotBeenCollectedOne;// = true;
-    public bool iHaveNotBeenCollectedTwo;// = true;//, updateImageTwo = true;
-    public bool iHaveNotBeenCollectedThree;// = true;//, updateImageThree = true;
-    public bool iHaveNotBeenCollectedFour;// = true;//, updateImageFour = true;*/
+    public bool iHaveNotBeenCollectedRooftop;
+    public bool iHaveNotBeenCollectedStorage;
+    public bool iHaveNotBeenCollectedCatchment;
+    public bool iHaveNotBeenCollectedSuction;
 
     public int immovableMass;
     public int moveableMass;
@@ -63,6 +73,11 @@ public class KnowGrab : MonoBehaviour
     {
         myRb = GetComponent<Rigidbody>();
         carrying = false;
+        iHaveNotBeenCollectedRooftop = true;
+        iHaveNotBeenCollectedStorage = true;
+        iHaveNotBeenCollectedCatchment = true;
+        iHaveNotBeenCollectedSuction = true;
+        //originalColor = objectToGrab.GetComponent<Renderer>().material.color;
     }
     
     public void OnCollisionEnter(Collision other)
@@ -70,12 +85,18 @@ public class KnowGrab : MonoBehaviour
         if (other.gameObject.CompareTag("Rooftop"))
         {
             objectToGrab = other.gameObject;
+            //objectToGrab.GetComponent<Renderer>().material.color = Color.green;
             //originalColor = objectToGrab.gameObject.GetComponent<Renderer>().material.color;
 
             if (objectToGrab != null)
             {
-                if (!carrying)
+               // originalColor = objectToGrab.gameObject.GetComponent<Renderer>().material.color;
+               
+                if (!carrying && iHaveNotBeenCollectedRooftop)//(!carrying)
                 {
+                    //objectToGrab.GetComponent<Renderer>().material.color = Color.green;
+                    objectToGrab.GetComponent<MeshRenderer>().material.SetColor("_BaseColor", Color.green);
+                    //objectToGrab.GetComponent<Renderer>().enabled = Color.green;
                     FixedJoint grabJoint = objectToGrab.AddComponent<FixedJoint>();
                     myHips.GetComponent<Rigidbody>().freezeRotation = true;
                     myTorso.GetComponent<Rigidbody>().freezeRotation = true;
@@ -89,7 +110,6 @@ public class KnowGrab : MonoBehaviour
                     //grabJoint.spring = 750f;
                     //objectToGrab.GetComponent<SpringJoint>().damper = 100f;
 // for each loop a list, if list.this index does not exist then do the following then add this index to list and dont do the following for this index again
-                    objectToGrab.GetComponent<Renderer>().material.color = Color.green;
                     objectToGrab.GetComponent<Rigidbody>().mass = moveableMass;
                     objectToGrab.GetComponent<Rigidbody>().useGravity = true;
                     objectToGrab.GetComponent<Rigidbody>().isKinematic = false;
@@ -101,7 +121,7 @@ public class KnowGrab : MonoBehaviour
                     //objectToGrab.GetComponent<Rigidbody>().velocity = myRb.velocity;
                     //objectToGrab.GetComponent<Rigidbody>().AddForce(myRb.velocity);
 
-                    bool iHaveNotBeenCollected = true;
+                   /* bool iHaveNotBeenCollected = true;
 
                    if (iHaveNotBeenCollected) // && iHaveNotBeenCollectedTwo && iHaveNotBeenCollectedThree && iHaveNotBeenCollectedFour)
                    {
@@ -113,147 +133,215 @@ public class KnowGrab : MonoBehaviour
                            StartCoroutine(ShowAndHide(imageToShow, 5.0f));
                        }
                        iHaveNotBeenCollected = false;
+                   }*/
+                   
+                   imageToSetActiveOne.SetActive(true);
+                   imageToSetInactiveOne.SetActive(false);
+                   showImage = true;
+                   if (showImage)
+                   {
+                       StartCoroutine(ShowAndHide(imageToShow, 5.0f));
                    }
-
+                   showRawImage = true;
+                   if (showRawImage)
+                   {
+                       myFlyOCameraOne.SetActive(true);
+                       StartCoroutine(ShowAndHideTwo(flyOverOne, 14.0f));
+                   }
+                   
                    carrying = true;
+                   iHaveNotBeenCollectedRooftop = false;
+                }
+               else if (!carrying && !iHaveNotBeenCollectedRooftop)
+                {
+                    FixedJoint grabJoint = objectToGrab.AddComponent<FixedJoint>();
+                    myHips.GetComponent<Rigidbody>().freezeRotation = true;
+                    myTorso.GetComponent<Rigidbody>().freezeRotation = true;
+                    grabJoint.connectedBody = myRb;
+                    grabJoint.breakForce = Single.PositiveInfinity;
+                    grabJoint.enablePreprocessing = false;
+                    objectToGrab.GetComponent<Renderer>().material.color = Color.green;
+                    objectToGrab.GetComponent<Rigidbody>().mass = moveableMass;
+                    objectToGrab.GetComponent<Rigidbody>().useGravity = true;
+                    objectToGrab.GetComponent<Rigidbody>().isKinematic = false;
+                    objectToGrab.GetComponent<Rigidbody>().freezeRotation = true;
+                    objectToGrab.GetComponent<Rigidbody>().AddForce(myRb.velocity - objectToGrab.GetComponent<Rigidbody>().velocity
+                                                                    / (objectToGrab.GetComponent<Rigidbody>().mass * Time.deltaTime));
+                    carrying = true;
                 }
             }
         }
         if (other.gameObject.CompareTag("Storage"))
         {
             objectToGrab = other.gameObject;
-           // originalColor = objectToGrab.gameObject.GetComponent<Renderer>().material.color;
 
             if (objectToGrab != null)
             {
-                if (!carrying)
+                if (!carrying && iHaveNotBeenCollectedStorage)//(!carrying)
                 {
                     FixedJoint grabJoint = objectToGrab.AddComponent<FixedJoint>();
                     myHips.GetComponent<Rigidbody>().freezeRotation = true;
                     myTorso.GetComponent<Rigidbody>().freezeRotation = true;
-                    //SpringJoint grabJoint = objectToGrab.AddComponent<SpringJoint>();
                     grabJoint.connectedBody = myRb;
                     grabJoint.breakForce = Single.PositiveInfinity;
                     grabJoint.enablePreprocessing = false;
-                    //grabJoint.spring = 750f;
-                    //objectToGrab.GetComponent<SpringJoint>().damper = 100f;
-// for each loop a list, if list.this index does not exist then do the following then add this index to list and dont do the following for this index again
                     objectToGrab.GetComponent<Renderer>().material.color = Color.green;
                     objectToGrab.GetComponent<Rigidbody>().mass = moveableMass;
                     objectToGrab.GetComponent<Rigidbody>().useGravity = true;
                     objectToGrab.GetComponent<Rigidbody>().isKinematic = false;
                     objectToGrab.GetComponent<Rigidbody>().freezeRotation = true;
-                    //objectToGrab.GetComponent<Rigidbody>().velocity = myRb.velocity;
                     objectToGrab.GetComponent<Rigidbody>().AddForce(myRb.velocity - objectToGrab.GetComponent<Rigidbody>().velocity
                                                                     / (objectToGrab.GetComponent<Rigidbody>().mass * Time.deltaTime));
-
-                    bool iHaveNotBeenCollected = true;
-
-                   if (iHaveNotBeenCollected) // && iHaveNotBeenCollectedTwo && iHaveNotBeenCollectedThree && iHaveNotBeenCollectedFour)
-                   {
-                       imageToSetActiveTwo.SetActive(true);
-                       imageToSetInactiveTwo.SetActive(false);
-                       showImage = true;
-                       if (showImage)
-                       {
-                           StartCoroutine(ShowAndHide(imageToShow, 5.0f));
-                       }
-                       iHaveNotBeenCollected = false;
-                   }
-
-                   carrying = true;
+                    imageToSetActiveTwo.SetActive(true);
+                    imageToSetInactiveTwo.SetActive(false);
+                    showImage = true;
+                    if (showImage)
+                    {
+                        StartCoroutine(ShowAndHide(imageToShow, 5.0f));
+                    }
+                    showRawImage = true;
+                    if (showRawImage)
+                    {
+                        myFlyOCameraTwo.SetActive(true);
+                        StartCoroutine(ShowAndHideTwo(flyOverTwo, 14.0f));
+                    }
+                    carrying = true;
+                    iHaveNotBeenCollectedStorage = false;
+                }
+                
+                else if (!carrying && !iHaveNotBeenCollectedStorage)
+                {
+                    FixedJoint grabJoint = objectToGrab.AddComponent<FixedJoint>();
+                    myHips.GetComponent<Rigidbody>().freezeRotation = true;
+                    myTorso.GetComponent<Rigidbody>().freezeRotation = true;
+                    grabJoint.connectedBody = myRb;
+                    grabJoint.breakForce = Single.PositiveInfinity;
+                    grabJoint.enablePreprocessing = false;
+                    objectToGrab.GetComponent<Renderer>().material.color = Color.green;
+                    objectToGrab.GetComponent<Rigidbody>().mass = moveableMass;
+                    objectToGrab.GetComponent<Rigidbody>().useGravity = true;
+                    objectToGrab.GetComponent<Rigidbody>().isKinematic = false;
+                    objectToGrab.GetComponent<Rigidbody>().freezeRotation = true;
+                    objectToGrab.GetComponent<Rigidbody>().AddForce(myRb.velocity - objectToGrab.GetComponent<Rigidbody>().velocity
+                                                                    / (objectToGrab.GetComponent<Rigidbody>().mass * Time.deltaTime));
+                    carrying = true;
+                    
                 }
             }
         }
         if (other.gameObject.CompareTag("Catchment"))
         {
             objectToGrab = other.gameObject;
-            //originalColor = objectToGrab.gameObject.GetComponent<Renderer>().material.color;
 
             if (objectToGrab != null)
             {
-                if (!carrying)
+                if (!carrying && iHaveNotBeenCollectedCatchment)//(!carrying)
                 {
                     FixedJoint grabJoint = objectToGrab.AddComponent<FixedJoint>();
                     myHips.GetComponent<Rigidbody>().freezeRotation = true;
                     myTorso.GetComponent<Rigidbody>().freezeRotation = true;
-                    //SpringJoint grabJoint = objectToGrab.AddComponent<SpringJoint>();
                     grabJoint.connectedBody = myRb;
                     grabJoint.breakForce = Single.PositiveInfinity;
                     grabJoint.enablePreprocessing = false;
-                    //grabJoint.spring = 750f;
-                    //objectToGrab.GetComponent<SpringJoint>().damper = 100f;
-// for each loop a list, if list.this index does not exist then do the following then add this index to list and dont do the following for this index again
                     objectToGrab.GetComponent<Renderer>().material.color = Color.green;
                     objectToGrab.GetComponent<Rigidbody>().mass = moveableMass;
                     objectToGrab.GetComponent<Rigidbody>().useGravity = true;
                     objectToGrab.GetComponent<Rigidbody>().isKinematic = false;
                     objectToGrab.GetComponent<Rigidbody>().freezeRotation = true;
-                    //objectToGrab.GetComponent<Rigidbody>().velocity = myRb.velocity;
                     objectToGrab.GetComponent<Rigidbody>().AddForce(myRb.velocity - objectToGrab.GetComponent<Rigidbody>().velocity
                                                                     / (objectToGrab.GetComponent<Rigidbody>().mass * Time.deltaTime));
 
-                    bool iHaveNotBeenCollected = true;
-
-                    if (iHaveNotBeenCollected) // && iHaveNotBeenCollectedTwo && iHaveNotBeenCollectedThree && iHaveNotBeenCollectedFour)
-                   {
-                       imageToSetActiveThree.SetActive(true);
-                       imageToSetInactiveThree.SetActive(false);
-                       showImage = true;
-                       if (showImage)
-                       {
-                           StartCoroutine(ShowAndHide(imageToShow, 5.0f));
-                       }
-                       iHaveNotBeenCollected = false;
-                   }
-
-                   carrying = true;
+                    imageToSetActiveThree.SetActive(true);
+                    imageToSetInactiveThree.SetActive(false);
+                    showImage = true;
+                    if (showImage)
+                    {
+                        StartCoroutine(ShowAndHide(imageToShow, 5.0f));
+                    }
+                    showRawImage = true;
+                    if (showRawImage)
+                    {
+                        myFlyOCameraThree.SetActive(true);
+                        StartCoroutine(ShowAndHideTwo(flyOverThree, 14.0f));
+                    }
+                    carrying = true;
+                    iHaveNotBeenCollectedCatchment = false;
+                }
+                
+                else if (!carrying && !iHaveNotBeenCollectedCatchment)
+                {
+                    FixedJoint grabJoint = objectToGrab.AddComponent<FixedJoint>();
+                    myHips.GetComponent<Rigidbody>().freezeRotation = true;
+                    myTorso.GetComponent<Rigidbody>().freezeRotation = true;
+                    grabJoint.connectedBody = myRb;
+                    grabJoint.breakForce = Single.PositiveInfinity;
+                    grabJoint.enablePreprocessing = false;
+                    objectToGrab.GetComponent<Renderer>().material.color = Color.green;
+                    objectToGrab.GetComponent<Rigidbody>().mass = moveableMass;
+                    objectToGrab.GetComponent<Rigidbody>().useGravity = true;
+                    objectToGrab.GetComponent<Rigidbody>().isKinematic = false;
+                    objectToGrab.GetComponent<Rigidbody>().freezeRotation = true;
+                    objectToGrab.GetComponent<Rigidbody>().AddForce(myRb.velocity - objectToGrab.GetComponent<Rigidbody>().velocity
+                                                                    / (objectToGrab.GetComponent<Rigidbody>().mass * Time.deltaTime));
+                    carrying = true;
                 }
             }
         }
         if (other.gameObject.CompareTag("Suction"))
         {
             objectToGrab = other.gameObject;
-            //originalColor = objectToGrab.gameObject.GetComponent<Renderer>().material.color;
 
             if (objectToGrab != null)
             {
-                if (!carrying)
+                if (!carrying && iHaveNotBeenCollectedSuction)//(!carrying)
                 {
                     FixedJoint grabJoint = objectToGrab.AddComponent<FixedJoint>();
                     myHips.GetComponent<Rigidbody>().freezeRotation = true;
                     myTorso.GetComponent<Rigidbody>().freezeRotation = true;
-                    //SpringJoint grabJoint = objectToGrab.AddComponent<SpringJoint>();
                     grabJoint.connectedBody = myRb;
                     grabJoint.breakForce = Single.PositiveInfinity;
                     grabJoint.enablePreprocessing = false;
-                    //grabJoint.spring = 750f;
-                    //objectToGrab.GetComponent<SpringJoint>().damper = 100f;
-// for each loop a list, if list.this index does not exist then do the following then add this index to list and dont do the following for this index again
                     objectToGrab.GetComponent<Renderer>().material.color = Color.green;
                     objectToGrab.GetComponent<Rigidbody>().mass = moveableMass;
                     objectToGrab.GetComponent<Rigidbody>().useGravity = true;
                     objectToGrab.GetComponent<Rigidbody>().isKinematic = false;
                     objectToGrab.GetComponent<Rigidbody>().freezeRotation = true;
-                   //objectToGrab.GetComponent<Rigidbody>().velocity = myRb.velocity;
-                   objectToGrab.GetComponent<Rigidbody>().AddForce(myRb.velocity - objectToGrab.GetComponent<Rigidbody>().velocity
-                                                                   / (objectToGrab.GetComponent<Rigidbody>().mass * Time.deltaTime));
+                    objectToGrab.GetComponent<Rigidbody>().AddForce(myRb.velocity - objectToGrab.GetComponent<Rigidbody>().velocity
+                                                                    / (objectToGrab.GetComponent<Rigidbody>().mass * Time.deltaTime));
 
-                   bool iHaveNotBeenCollected = true;
-
-                   if (iHaveNotBeenCollected) // && iHaveNotBeenCollectedTwo && iHaveNotBeenCollectedThree && iHaveNotBeenCollectedFour)
-                   {
-                       imageToSetActiveFour.SetActive(true);
-                       imageToSetInactiveFour.SetActive(false);
-                       showImage = true;
-                       if (showImage)
-                       {
-                           StartCoroutine(ShowAndHide(imageToShow, 5.0f));
-                       }
-                       iHaveNotBeenCollected = false;
-                   }
-
-                   carrying = true;
+                    imageToSetActiveFour.SetActive(true);
+                    imageToSetInactiveFour.SetActive(false);
+                    showImage = true;
+                    if (showImage)
+                    {
+                        StartCoroutine(ShowAndHide(imageToShow, 5.0f));
+                    }
+                    showRawImage = true;
+                    if (showRawImage)
+                    {
+                        myFlyOCameraFour.SetActive(true);
+                        StartCoroutine(ShowAndHideTwo(flyOverFour, 14.0f));
+                    }
+                    carrying = true;
+                    iHaveNotBeenCollectedSuction = false;
+                }
+                
+                else if (!carrying && !iHaveNotBeenCollectedSuction)
+                {
+                    FixedJoint grabJoint = objectToGrab.AddComponent<FixedJoint>();
+                    myHips.GetComponent<Rigidbody>().freezeRotation = true;
+                    myTorso.GetComponent<Rigidbody>().freezeRotation = true;
+                    grabJoint.connectedBody = myRb;
+                    grabJoint.breakForce = Single.PositiveInfinity;
+                    grabJoint.enablePreprocessing = false;
+                    objectToGrab.GetComponent<Renderer>().material.color = Color.green;
+                    objectToGrab.GetComponent<Rigidbody>().mass = moveableMass;
+                    objectToGrab.GetComponent<Rigidbody>().useGravity = true;
+                    objectToGrab.GetComponent<Rigidbody>().isKinematic = false;
+                    objectToGrab.GetComponent<Rigidbody>().freezeRotation = true;
+                    objectToGrab.GetComponent<Rigidbody>().AddForce(myRb.velocity - objectToGrab.GetComponent<Rigidbody>().velocity
+                                                                    / (objectToGrab.GetComponent<Rigidbody>().mass * Time.deltaTime));
+                    carrying = true;
                 }
             }
         }
@@ -320,6 +408,9 @@ public class KnowGrab : MonoBehaviour
                 objectToGrab.GetComponent<Renderer>().material.color = originalColor;
                 objectToGrab.GetComponent<Rigidbody>().useGravity = true;
                 objectToGrab.GetComponent<Rigidbody>().isKinematic = false;
+                
+                objectToGrab.GetComponent<Renderer>().material.color = originalColor;
+                showRawImage = false;
             }
             objectToGrab.GetComponent<Renderer>().material.color = originalColor;
         }
@@ -331,7 +422,7 @@ public class KnowGrab : MonoBehaviour
                 //Physics.gravity = currentRotation;
                 //enabledForcesManager.enabled = true;
 
-                //myFoot.GetComponent<SphereCaster>().enabled = true;
+                myFoot.GetComponent<SphereCaster>().enabled = true;
                 transform.parent = originalParent.transform;
 
             // originalParent.GetComponent<Rigidbody>().AddForce(transform.forward * 20000000);
@@ -340,12 +431,12 @@ public class KnowGrab : MonoBehaviour
             myHips.GetComponent<Rigidbody>().AddRelativeForce(throwForce * Time.deltaTime);// / holdOnTight.transform.forward);
             //myCatapult.enabled = true;
 
-            myCom.GetComponent<ConstantForce>().force = new Vector3(0,0,0);
-            myHead.GetComponent<ConstantForce>().force = new Vector3(0,0,0);
-            myTorso.GetComponent<ConstantForce>().force = new Vector3(0,0,0);
-            myHips.GetComponent<ConstantForce>().force = new Vector3(0,0,0);
-            myHips.GetComponent<SpringJoint>().connectedBody = null;
-            Physics.gravity = new Vector3(0,-750f,0);
+            //myCom.GetComponent<ConstantForce>().force = new Vector3(0,0,0);
+            //myHead.GetComponent<ConstantForce>().force = new Vector3(0,0,0);
+            //myTorso.GetComponent<ConstantForce>().force = new Vector3(0,0,0);
+            //myHips.GetComponent<ConstantForce>().force = new Vector3(0,0,0);
+            //myHips.GetComponent<SpringJoint>().connectedBody = null;
+            //Physics.gravity = new Vector3(0,-750f,0);
             //myFoot.GetComponent<SphereCaster>().enabled = true;
 
             //originalParent.GetComponent<Rigidbody>().rotation = other.rigidbody.rotation;
@@ -371,8 +462,10 @@ public class KnowGrab : MonoBehaviour
     }
 
        // myCatapult.enabled = false;
+        showRawImage = false;
         objectToGrab = null;
         carrying = false;
+        StopCoroutine(ShowAndHideTwo(null, 0f));
         //objectToGrab.GetComponent<Renderer>().material.color = originalColor;
     }
     
@@ -380,6 +473,14 @@ public class KnowGrab : MonoBehaviour
     {
         go.enabled = (true);
         myAudio.Play ();
+        yield return new WaitForSeconds(delay);
+        go.enabled = (false);
+    }
+    
+    IEnumerator ShowAndHideTwo( RawImage go, float delay )
+    {
+        go.enabled = (true);
+        //myAudio.Play ();
         yield return new WaitForSeconds(delay);
         go.enabled = (false);
     }
