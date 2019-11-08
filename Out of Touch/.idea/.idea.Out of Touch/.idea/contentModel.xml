@@ -7,18 +7,24 @@
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="HideAndReplace.cs" t="Include" />
         <e p="MatchRightHand.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="Interaction" t="Include">
             <e p="buttonGrabLG.cs" t="Include" />
             <e p="ButtonTouchInput.cs" t="Include" />
+            <e p="Catapult.cs" t="Include" />
             <e p="ColGrabNRelease.cs" t="Include" />
             <e p="CollisionGrab.cs" t="Include" />
+            <e p="KGrabNew.cs" t="Include" />
             <e p="KnowGrab.cs" t="Include" />
             <e p="NewJointGrab.cs" t="Include" />
+            <e p="RagdollControl.cs" t="Include" />
             <e p="RaiseHands.cs" t="Include" />
+            <e p="rotAround.cs" t="Include" />
             <e p="SnapObject.cs" t="Include" />
             <e p="stayInPlace.cs" t="Include" />
+            <e p="Target.cs" t="Include" />
             <e p="TouchInput.cs" t="Include" />
           </e>
           <e p="Know System" t="Include">
@@ -46,6 +52,7 @@
             <e p="SelfBalance.cs" t="Include" />
             <e p="smoothCamFollow.cs" t="Include" />
             <e p="SphereCaster.cs" t="Include" />
+            <e p="ThrowSimulation.cs" t="Include" />
           </e>
           <e p="UI" t="Include">
             <e p="ColourLerp.cs" t="Include" />
@@ -72,7 +79,6 @@
             <e p="pushPull.cs" t="Include" />
             <e p="rayCastDrag.cs" t="Include" />
             <e p="rayGrabFinal.cs" t="Include" />
-            <e p="rotAround.cs" t="Include" />
             <e p="SimplePickUp.cs" t="Include" />
             <e p="superAnimate.cs" t="Include" />
             <e p="superMovement.cs" t="Include" />

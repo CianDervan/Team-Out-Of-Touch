@@ -18,7 +18,7 @@ public class SnapObject : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.tag == "Tank")
+        if (other.gameObject.tag == "Storage")
         {
             ObjectToSnap.transform.position = ObjectPos.transform.position;
             ObjectToSnap.transform.rotation = ObjectPos.transform.rotation;

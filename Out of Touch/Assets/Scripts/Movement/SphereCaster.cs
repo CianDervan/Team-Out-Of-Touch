@@ -22,25 +22,6 @@ public class SphereCaster : MonoBehaviour
     public Rigidbody facePlant;
     public Rigidbody COMConnector;
     public ConstantForce[] uprightforces;
-    
-    
-    
-    /* private bool GroundCheck(float groundCheckHeight, out bool result)
- {
-
-     Physics.SphereCast(this.transform.position +
-                        // here, to make the sphere start position higher by this offset
-                        Vector3.up * (mySphereCollider. radius + Physics.defaultContactOffset),
-         // and here to make the sphere radius lower by this offset
-         mySphereCollider.radius - Physics.defaultContactOffset,
-         Vector3.down, out groundHitInfo, maxCheckHeight);
-     
-     Debug.Log ("Dist: " + groundHitInfo.distance + ", collider: " + groundHitInfo.collider);
-     return result =
-         groundHitInfo.distance <= groundCheckHeight
-             ? true : false;
-
- }*/
 
     private void Awake()
     {
@@ -67,13 +48,14 @@ public class SphereCaster : MonoBehaviour
             facePlant.GetComponent<Rigidbody>().mass = 1;
            
             uprightforces[0].enabled = true; // com
+            //uprightforces[0] == 
             uprightforces[1].enabled = true; // head
             uprightforces[2].enabled = true; // torso
             uprightforces[3].enabled = true; // hips
             Physics.gravity = new Vector3(0, -30F, 0);
             hips.GetComponent<SpringJoint>().connectedBody = COMConnector;
             //COMConnector.GetComponent<FixedJoint>().connectedBody = hips;
- 
+
         }
 
         else
