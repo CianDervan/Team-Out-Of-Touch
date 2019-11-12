@@ -66,6 +66,8 @@ public class KnowGrab : MonoBehaviour
     public int immovableMass;
     public int moveableMass;
 
+    private Vector3 lastPos;
+    
     [SerializeField]
     private LayerMask layerMask;
 
@@ -79,7 +81,12 @@ public class KnowGrab : MonoBehaviour
         iHaveNotBeenCollectedSuction = true;
         //originalColor = objectToGrab.GetComponent<Renderer>().material.color;
     }
-    
+
+    private void LateUpdate()
+    {
+        lastPos = transform.position;
+    }
+
     public void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.CompareTag("Rooftop"))
@@ -378,9 +385,11 @@ public class KnowGrab : MonoBehaviour
                                 myTorso.GetComponent<Rigidbody>().freezeRotation = true;
                                 
                                 //SpringJoint grabJoint = objectToGrab.AddComponent<SpringJoint>();
+                                
                                 grabJoint.connectedBody = holdOnTight.GetComponent<Rigidbody>();
                                 grabJoint.breakForce = Single.PositiveInfinity;
                                 grabJoint.enablePreprocessing = false;
+                                
                                 //grabJoint.spring = 750f;
                                 //objectToGrab.GetComponent<SpringJoint>().damper = 100f;
                                 //holdOnTight.GetComponent<Rigidbody>().mass = immovableMass;
@@ -415,8 +424,10 @@ public class KnowGrab : MonoBehaviour
             objectToGrab.GetComponent<Renderer>().material.color = originalColor;
         }
 
+        //Let go of interactable
         if (holdOnTight != null)
         {
+            
            if (thisObject.GetComponent<SphereCollider>().enabled == false && carrying)
            {
                 //Physics.gravity = currentRotation;
@@ -428,7 +439,7 @@ public class KnowGrab : MonoBehaviour
             // originalParent.GetComponent<Rigidbody>().AddForce(transform.forward * 20000000);
             //myHips.GetComponent<Rigidbody>().AddRelativeForce(holdOnTight.transform.forward * holdOnTight.GetComponent<Rigidbody>().angularVelocity.z);
             //myHips.GetComponent<Rigidbody>().AddRelativeForce(holdOnTight.GetComponent<Rigidbody>().angularVelocity * 60000);
-            myHips.GetComponent<Rigidbody>().AddRelativeForce(throwForce * Time.deltaTime);// / holdOnTight.transform.forward);
+            //myHips.GetComponent<Rigidbody>().AddRelativeForce(throwForce * Time.deltaTime);// / holdOnTight.transform.forward);
             //myCatapult.enabled = true;
 
             //myCom.GetComponent<ConstantForce>().force = new Vector3(0,0,0);
@@ -449,6 +460,10 @@ public class KnowGrab : MonoBehaviour
             
            myHips.GetComponent<Rigidbody>().freezeRotation = false;
            myTorso.GetComponent<Rigidbody>().freezeRotation = false;
+
+
+           var throwVector =  myHips.GetComponent<Rigidbody>().velocity.normalized;
+           myHips.GetComponent<Rigidbody>().AddForce(throwVector * 10000f, ForceMode.Impulse);
            
             //SpringJoint grabJoint = objectToGrab.AddComponent<SpringJoint>();
             //grabJoint.spring = 750f;
