@@ -10,6 +10,10 @@ TagManager:
   - Suction
   - Storage
   - Rooftop
+  - Catchment Marker
+  - Suction Marker
+  - Storage Marker
+  - Rooftop Marker
   layers:
   - Default
   - TransparentFX
