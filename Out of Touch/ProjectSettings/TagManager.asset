@@ -3,21 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Tank
-  - Interactable
-  - Catchment
-  - Suction
-  - Storage
-  - Rooftop
-<<<<<<< HEAD
-  - sidetoside
-=======
-  - Catchment Marker
-  - Suction Marker
-  - Storage Marker
-  - Rooftop Marker
->>>>>>> eeef2637b8f7150707c6d7cd224cec0e21ace7a1
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -27,11 +13,11 @@ TagManager:
   - UI
   - 
   - 
-  - PostProcessing
-  - Interactables
-  - TouchInput
-  - NoSelfCollision
-  - Ground
+  - 
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 
