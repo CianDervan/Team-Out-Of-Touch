@@ -14,6 +14,7 @@
         <e p="ProCore" t="Include">
           <e p="ProBuilder" t="Include">
             <e p="About" t="Include">
+              <e p="changelog.txt" t="Include" />
               <e p="Editor" t="Include">
                 <e p="pb_AboutWindow.cs" t="Include" />
                 <e p="pb_UpdateAvailable.cs" t="Include" />
@@ -21,6 +22,11 @@
                 <e p="pb_VersionInfo.cs" t="Include" />
                 <e p="pb_VersionUtil.cs" t="Include" />
               </e>
+              <e p="Font" t="Include">
+                <e p="SIL Open Font License.txt" t="Include" />
+              </e>
+              <e p="pc_AboutEntry_ProBuilder.txt" t="Include" />
+              <e p="ThirdPartyLicenses.txt" t="Include" />
             </e>
             <e p="API Examples" t="Include">
               <e p="Editor" t="Include">
@@ -32,6 +38,7 @@
                 <e p="SetCustomUnwrapParams.cs" t="Include" />
               </e>
               <e p="Icosphere FFT" t="Include">
+                <e p="Readme.txt" t="Include" />
                 <e p="Scripts" t="Include">
                   <e p="CameraControls.cs" t="Include" />
                   <e p="IcoBumpin.cs" t="Include" />
@@ -106,6 +113,25 @@
               <e p="pb_MissingScriptEditor.cs" t="Include" />
               <e p="pb_Preferences.cs" t="Include" />
               <e p="pb_ScenePostProcessor.cs" t="Include" />
+            </e>
+            <e p="Readme.txt" t="Include" />
+            <e p="Shader" t="Include">
+              <e p="DiffuseTextureBlend.shader" t="Include" />
+              <e p="DiffuseVertexColor.shader" t="Include" />
+              <e p="pb_FaceHighlight.shader" t="Include" />
+              <e p="pb_FacePicker.shader" t="Include" />
+              <e p="pb_HideVertices.shader" t="Include" />
+              <e p="pb_NormalPreview.shader" t="Include" />
+              <e p="pb_ReferenceUnlit.shader" t="Include" />
+              <e p="pb_ScrollHighlight.shader" t="Include" />
+              <e p="pb_SelectionPicker.shader" t="Include" />
+              <e p="pb_SmoothingPreview.shader" t="Include" />
+              <e p="pb_StandardVertexColor.shader" t="Include" />
+              <e p="pb_TransparentOverlay.shader" t="Include" />
+              <e p="pb_UnlitSolidColor.shader" t="Include" />
+              <e p="pb_UnlitVertexColor.shader" t="Include" />
+              <e p="pb_VertexPicker.shader" t="Include" />
+              <e p="pb_VertexShader.shader" t="Include" />
             </e>
           </e>
         </e>

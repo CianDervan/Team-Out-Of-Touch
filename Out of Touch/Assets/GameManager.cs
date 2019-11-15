@@ -76,13 +76,13 @@ public class GameManager : MonoBehaviour
    {
        //if (YouWonUIPanel || YouLostUIPanel)
        //{
-           EndKMenuBackground.SetActive(true);
+           //EndKMenuBackground.SetActive(true);
            //YouWonUIPanel.SetActive(false);
-           YouWonUIPanel.GetComponentInChildren<TextMeshProUGUI>().enabled = false;
-           YouWonUIPanel.GetComponentInChildren<TextMeshProUGUI>().enabled = false;
+           //YouWonUIPanel.GetComponentInChildren<TextMeshProUGUI>().enabled = false;
+           //YouWonUIPanel.GetComponentInChildren<TextMeshProUGUI>().enabled = false;
            //YouLostUIPanel.SetActive(false);
-           YouLostUIPanel.GetComponentInChildren<TextMeshProUGUI>().enabled = false;
-           YouLostUIPanel.GetComponentInChildren<TextMeshProUGUI>().enabled = false;
+           //YouLostUIPanel.GetComponentInChildren<TextMeshProUGUI>().enabled = false;
+           //YouLostUIPanel.GetComponentInChildren<TextMeshProUGUI>().enabled = false;
            //Time.timeScale = 1;
            KMenuObject.GetComponent<MenuOpen>().OpenMenu();
       // }
@@ -91,9 +91,12 @@ public class GameManager : MonoBehaviour
    public void StopTime()
    {
        Time.timeScale = 0f;
+       Score.canCount = false;
+
    }
    public void StartTime()
    {
        Time.timeScale = 1f;
+       Score.canCount = true;
    }
 }
