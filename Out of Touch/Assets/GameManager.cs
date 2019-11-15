@@ -92,4 +92,8 @@ public class GameManager : MonoBehaviour
    {
        Time.timeScale = 0f;
    }
+   public void StartTime()
+   {
+       Time.timeScale = 1f;
+   }
 }
