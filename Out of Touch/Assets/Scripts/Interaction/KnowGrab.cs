@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
+using Button = UnityEngine.UIElements.Button;
 
 public class KnowGrab : MonoBehaviour
 {
@@ -38,9 +39,13 @@ public class KnowGrab : MonoBehaviour
     public Color originalColor;
     
     public RawImage flyOverOne;
+    public GameObject flyOverOneButton;
     public RawImage flyOverTwo;
+    public GameObject flyOverTwoButton;
     public RawImage flyOverThree;
+    public GameObject flyOverThreeButton;
     public RawImage flyOverFour;
+    public GameObject flyOverFourButton;
 
     public GameObject imageToSetActiveOne;
     public GameObject imageToSetInactiveOne;
@@ -153,7 +158,9 @@ public class KnowGrab : MonoBehaviour
                    if (showRawImage)
                    {
                        myFlyOCameraOne.SetActive(true);
-                       StartCoroutine(ShowAndHideTwo(flyOverOne, 14.0f));
+                       //StartCoroutine(ShowAndHideTwo(flyOverOne, 14.0f));
+                       flyOverOne.enabled = true;
+                       flyOverOneButton.SetActive(true);
                    }
                    
                    carrying = true;
@@ -210,7 +217,9 @@ public class KnowGrab : MonoBehaviour
                     if (showRawImage)
                     {
                         myFlyOCameraTwo.SetActive(true);
-                        StartCoroutine(ShowAndHideTwo(flyOverTwo, 14.0f));
+                        //StartCoroutine(ShowAndHideTwo(flyOverTwo, 14.0f));
+                        flyOverTwo.enabled = true;
+                        flyOverTwoButton.SetActive(true);
                     }
                     carrying = true;
                     iHaveNotBeenCollectedStorage = false;
@@ -269,7 +278,9 @@ public class KnowGrab : MonoBehaviour
                     if (showRawImage)
                     {
                         myFlyOCameraThree.SetActive(true);
-                        StartCoroutine(ShowAndHideTwo(flyOverThree, 14.0f));
+                        //StartCoroutine(ShowAndHideTwo(flyOverThree, 14.0f));
+                        flyOverThree.enabled = true;
+                        flyOverThreeButton.SetActive(true);
                     }
                     carrying = true;
                     iHaveNotBeenCollectedCatchment = false;
@@ -327,7 +338,9 @@ public class KnowGrab : MonoBehaviour
                     if (showRawImage)
                     {
                         myFlyOCameraFour.SetActive(true);
-                        StartCoroutine(ShowAndHideTwo(flyOverFour, 14.0f));
+                        //StartCoroutine(ShowAndHideTwo(flyOverFour, 14.0f));
+                        flyOverFour.enabled = true;
+                        flyOverFourButton.SetActive(true);
                     }
                     carrying = true;
                     iHaveNotBeenCollectedSuction = false;
@@ -463,7 +476,7 @@ public class KnowGrab : MonoBehaviour
 
 
            var throwVector =  myHips.GetComponent<Rigidbody>().velocity.normalized;
-           myHips.GetComponent<Rigidbody>().AddForce(throwVector * 10000f, ForceMode.Impulse);
+           myHips.GetComponent<Rigidbody>().AddForce(throwVector * 20000f, ForceMode.Impulse);
            
             //SpringJoint grabJoint = objectToGrab.AddComponent<SpringJoint>();
             //grabJoint.spring = 750f;
