@@ -29,6 +29,10 @@ public class DarraghRagdollMovementControl : MonoBehaviour
     private bool prefeiçao; //nao mecher, porem nao há necessidade de existir
     private float pretime; //nao mecher, porem nao há necessidade de existir
 
+    private Vector3 rightDirection;
+    public Joystick joystick;
+    private Vector3 CamForward;
+    private Transform mainCam;
 
 
     void OnCollisionEnter(Collision col)
@@ -61,6 +65,8 @@ public class DarraghRagdollMovementControl : MonoBehaviour
 
     void Update()
     {
+        rightDirection = joystick.Vertical * CamForward + joystick.Horizontal * mainCam.right;
+
         if (!Morto)
         {
 
