@@ -32,6 +32,8 @@ public class HideAndReplace : MonoBehaviour
             Vector3 moveSmooth = Vector3.Lerp(other.transform.position, transform.position + outOfReach, lerpSpeed * Time.deltaTime);
             other.transform.position = moveSmooth;
             other.GetComponent<Rigidbody>().isKinematic = true;
+
+            Destroy(thisObject);
             //other.GetComponent<Rigidbody>().freezeRotation = true;
             //other.GetComponent<Rigidbody>()
             if (Score.timer >= 150)
