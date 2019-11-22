@@ -10,17 +10,17 @@ public class TutorialManager : MonoBehaviour
     // Tut Flow = 3 seconds pass and text pops explaining on screen controls, buttons, text and objectives. Establish logical order, like
     // do i get them to use particular button then move on
     
-    [SerializeField] private TextMeshProUGUI tutorialTimerText;
-    [SerializeField] private TextMeshProUGUI tutorialScoreText;
-    [SerializeField] private TextMeshProUGUI tutorialKMenuText;
-    [SerializeField] private TextMeshProUGUI tutorialGrabText;
-    [SerializeField] private TextMeshProUGUI tutorialMoveText;
-    [SerializeField] private TextMeshProUGUI tutorialInstructionText;
-    [SerializeField] private TextMeshProUGUI tutorialInMenuText;
+   // [SerializeField] private TextMeshProUGUI tutorialTimerText;
+   // [SerializeField] private TextMeshProUGUI tutorialScoreText;
+   // [SerializeField] private TextMeshProUGUI tutorialKMenuText;
+   // [SerializeField] private TextMeshProUGUI tutorialGrabText;
+   // [SerializeField] private TextMeshProUGUI tutorialMoveText;
+   // [SerializeField] private TextMeshProUGUI tutorialInstructionText;
+   // [SerializeField] private TextMeshProUGUI tutorialInMenuText;
 
-    public GameObject TutorialPanelOne;
-    public GameObject TutorialOverPanel;
-    public float tutDelays = 2f;
+   // public GameObject TutorialPanelOne;
+    public GameObject TutorialBeginPanel;
+    public float tutDelays = 10f;
     
 
    // public GameObject ControlsCanvas;
@@ -28,17 +28,23 @@ public class TutorialManager : MonoBehaviour
 
   void Start()
   {
-      TutorialFlow();
+      //Time.timeScale = 0f;
+     // TutorialFlow();
   }
   
   public void TutorialFlow()
   {
-      Invoke("TutorialOverlay", tutDelays);
+      Invoke("StopTime", tutDelays);
+  }
+  
+  public void LetsPlay()
+  {
+     // SceneManager.LoadScene(SceneManager.LoadScene(02));
   }
    
   public void TutorialOverlay()
   {
-      TutorialOverPanel.SetActive(true);
+      TutorialBeginPanel.SetActive(true);
   }
 
    public void StopTime()
