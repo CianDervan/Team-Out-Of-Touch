@@ -110,11 +110,27 @@ public class GameManager : MonoBehaviour
        //beginCamera.enabled = true;
 
    }
+   
+   public void ReturnToMainMenu()
+   {
+       SceneManager.LoadScene(sceneBuildIndex:0);
+       //Time.timeScale = 1;
+       //Score.canCount = true;
+   }
 
    public void BeginTutorial()
    {
+       SceneManager.LoadScene(sceneBuildIndex:1);
       // beginCamera.enabled = false;
-       Score.canCount = false;
+       //Score.canCount = false;
    }
+   
+   public void BeginGame()
+   {
+       SceneManager.LoadScene(sceneBuildIndex:2);
+       //Time.timeScale = 1;
+       //Score.canCount = true;
+   }
+
    
 }
