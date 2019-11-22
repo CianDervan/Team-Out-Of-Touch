@@ -36790,12 +36790,12 @@ MonoBehaviour:
   gameWon: 0
   restartDelay: 2
   gameOverDelay: 8
-  YouWonUIPanel: {fileID: 0}
-  YouLostUIPanel: {fileID: 0}
-  WinScoreDisplay: {fileID: 0}
-  LoseScoreDisplay: {fileID: 0}
-  EndKMenuBackground: {fileID: 0}
-  KMenuObject: {fileID: 2526482084032390426}
+  YouWonUIPanel: {fileID: 374492011}
+  YouLostUIPanel: {fileID: 285176929}
+  WinScoreDisplay: {fileID: 1591619525}
+  LoseScoreDisplay: {fileID: 216464575}
+  EndKMenuBackground: {fileID: 1258561992}
+  KMenuObject: {fileID: 1930858085}
 --- !u!4 &1339945067
 Transform:
   m_ObjectHideFlags: 0
