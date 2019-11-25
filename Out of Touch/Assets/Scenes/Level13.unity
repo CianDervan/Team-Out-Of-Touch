@@ -12445,6 +12445,33 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &555363600 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8513198029244807482, guid: 9da4a270c7807f24bb3c863a57e1174b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1684565678}
+  m_PrefabAsset: {fileID: 0}
+--- !u!59 &555363602 stripped
+HingeJoint:
+  m_CorrespondingSourceObject: {fileID: 4601767648837301307, guid: 9da4a270c7807f24bb3c863a57e1174b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1684565678}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &555363605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 555363600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6b7ab94bb50171478304e5c3035478d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MHJ: {fileID: 555363602}
+  Mpos: {fileID: 295505309}
+  MInveter: 0
 --- !u!1 &556888110
 GameObject:
   m_ObjectHideFlags: 0
@@ -26619,7 +26646,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MHJ: {fileID: 1144167788}
-  Mpos: {fileID: 209482708}
+  Mpos: {fileID: 295505309}
   MInveter: 0
 --- !u!1 &1147087696
 GameObject:
@@ -32460,7 +32487,7 @@ PrefabInstance:
     - target: {fileID: 2197957053926327702, guid: 6a657a15872c25d4fb8600e05b63295b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 76
+      value: 77
       objectReference: {fileID: 0}
     - target: {fileID: 2197957053926327702, guid: 6a657a15872c25d4fb8600e05b63295b,
         type: 3}
@@ -48207,7 +48234,7 @@ PrefabInstance:
     - target: {fileID: 8837882732383919977, guid: 9da4a270c7807f24bb3c863a57e1174b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 77
+      value: 76
       objectReference: {fileID: 0}
     - target: {fileID: 8837882732383919977, guid: 9da4a270c7807f24bb3c863a57e1174b,
         type: 3}

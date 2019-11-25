@@ -143,14 +143,14 @@ public class newJoystickControl : MonoBehaviour
         //joybutton = FindObjectOfType<Joybutton>();
         // }
 
-        LegRotationObject.SetActive(false);        
+        LegRotationObject.SetActive(false);    
     }
 
     void FixedUpdate()
     {
-        Animator LegAnim = LegAnimator.GetComponent<Animator>();
+        //Animator LegAnim = LegAnimator.GetComponent<Animator>();
 
-        bool StartWalk = LegAnim.GetBool("IsWalking");
+        //bool StartWalk = LegAnim.GetBool("IsWalking");
 
         // calculate camera relative direction
         CamForward = Vector3.Scale(mainCam.forward, new Vector3(1, 0, 1)).normalized;
@@ -170,7 +170,7 @@ public class newJoystickControl : MonoBehaviour
         {
             LegRotationObject.SetActive(true);
 
-            LegAnim.SetBool("IsWalking", StartWalk);
+            //LegAnim.SetBool("IsWalking", StartWalk);
 
             // create a smooth direction to look at using Slerp()
             Vector3 smoothDir = Vector3.Slerp(transform.forward, lookDirection*-1, turnSpeed * Time.deltaTime);
@@ -196,7 +196,7 @@ public class newJoystickControl : MonoBehaviour
         {
             LegRotationObject.SetActive(false);
 
-            LegAnim.SetBool("IsWalking", StartWalk);
+            //LegAnim.SetBool("IsWalking", StartWalk);
 
             transform.rotation = Quaternion.LookRotation(oldDirection + adjustment);
 
