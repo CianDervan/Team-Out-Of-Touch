@@ -1993,7 +1993,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &110177324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4779,6 +4779,12 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: 72a5d5fa7699b0c439f1972b67d0293b, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a657a15872c25d4fb8600e05b63295b, type: 3}
+--- !u!4 &209482708 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2197957053926327702, guid: 6a657a15872c25d4fb8600e05b63295b,
+    type: 3}
+  m_PrefabInstance: {fileID: 209482707}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &210474513 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: af4dafe57ab3b0f4a981dbd580d81fac,
@@ -7387,6 +7393,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1328684150}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &295505306 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2197957053926327705, guid: 6a657a15872c25d4fb8600e05b63295b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1328684150}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &295505309 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2197957053926327702, guid: 6a657a15872c25d4fb8600e05b63295b,
@@ -7560,7 +7572,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LegRotationObject: {fileID: 295505305}
   joystick: {fileID: 1544413170}
-  LegAnimator: {fileID: 0}
+  LegAnimator: {fileID: 295505306}
   veloRate: 1000
   addForceRate: 60000
   TouchField: {fileID: 1623218858}
@@ -22313,6 +22325,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1684565678}
   m_PrefabAsset: {fileID: 0}
+--- !u!59 &961646776 stripped
+HingeJoint:
+  m_CorrespondingSourceObject: {fileID: 4601767649720272277, guid: 9da4a270c7807f24bb3c863a57e1174b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1684565678}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &961646778
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22325,8 +22343,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6b7ab94bb50171478304e5c3035478d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MHJ: {fileID: 0}
-  Mpos: {fileID: 0}
+  MHJ: {fileID: 961646776}
+  Mpos: {fileID: 209482708}
   MInveter: 0
 --- !u!1 &969424194
 GameObject:
@@ -26545,6 +26563,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1684565678}
   m_PrefabAsset: {fileID: 0}
+--- !u!59 &1144167788 stripped
+HingeJoint:
+  m_CorrespondingSourceObject: {fileID: 4601767649227190015, guid: 9da4a270c7807f24bb3c863a57e1174b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1684565678}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1144167790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26557,8 +26581,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6b7ab94bb50171478304e5c3035478d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MHJ: {fileID: 0}
-  Mpos: {fileID: 0}
+  MHJ: {fileID: 1144167788}
+  Mpos: {fileID: 209482708}
   MInveter: 0
 --- !u!1 &1147087696
 GameObject:
@@ -36177,13 +36201,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1458540066}
-  m_LocalRotation: {x: -0, y: -0, z: 0.70710677, w: 0.7071068}
-  m_LocalPosition: {x: 0.84444445, y: 0.8503333, z: -0.006666668}
+  m_LocalRotation: {x: -0.00619762, y: -0.0060538794, z: 0.7063335, w: 0.7078263}
+  m_LocalPosition: {x: 0.8444824, y: 0.8503332, z: -0.0066668196}
   m_LocalScale: {x: 0.39498168, y: 0.39498168, z: 0.39498168}
   m_Children: []
   m_Father: {fileID: 285928427}
   m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90.00001}
+  m_LocalEulerAnglesHint: {x: -0.013, y: -0.99300003, z: 89.879005}
 --- !u!1 &1470093361
 GameObject:
   m_ObjectHideFlags: 0
@@ -40648,6 +40672,97 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e0e60385ca7898242b4e07f84e90d728, type: 3}
+--- !u!1 &1606239477 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8375163972764071710, guid: 9da4a270c7807f24bb3c863a57e1174b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1684565678}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1606239478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1606239477}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e646eb2ff2f21145a9d1c75d7809ae4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1606239479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1606239477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 646ca065584f5464f93b49836399d5c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animSource: {fileID: 331101797}
+--- !u!114 &1606239480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1606239477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ee6766a1221c9d44a906bace6bad7f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myFlyOCameraOne: {fileID: 672106059}
+  myFlyOCameraTwo: {fileID: 1275487240}
+  myFlyOCameraThree: {fileID: 1806556641}
+  myFlyOCameraFour: {fileID: 1778200185}
+  currentRotation: {x: 0, y: 0, z: 0}
+  throwForce: {x: 0, y: 0, z: 0}
+  myCom: {fileID: 177562369}
+  myHead: {fileID: 276634199}
+  myTorso: {fileID: 631383469}
+  myHips: {fileID: 1580171777}
+  myFoot: {fileID: 710103976}
+  thisObject: {fileID: 1082118979}
+  originalParent: {fileID: 285928423}
+  objectToGrab: {fileID: 0}
+  animSource: {fileID: 331101797}
+  holdOnTight: {fileID: 0}
+  myAudio: {fileID: 1834751023}
+  imageToShow: {fileID: 512783433}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
+  flyOverOne: {fileID: 1544621133}
+  flyOverOneButton: {fileID: 0}
+  flyOverTwo: {fileID: 1061298179}
+  flyOverTwoButton: {fileID: 0}
+  flyOverThree: {fileID: 920292759}
+  flyOverThreeButton: {fileID: 0}
+  flyOverFour: {fileID: 1310205821}
+  flyOverFourButton: {fileID: 0}
+  imageToSetActiveOne: {fileID: 0}
+  imageToSetInactiveOne: {fileID: 0}
+  imageToSetActiveTwo: {fileID: 731112793}
+  imageToSetInactiveTwo: {fileID: 0}
+  imageToSetActiveThree: {fileID: 0}
+  imageToSetInactiveThree: {fileID: 0}
+  imageToSetActiveFour: {fileID: 425824626}
+  imageToSetInactiveFour: {fileID: 0}
+  showImage: 0
+  showRawImage: 0
+  carrying: 0
+  iHaveNotBeenCollectedRooftop: 0
+  iHaveNotBeenCollectedStorage: 0
+  iHaveNotBeenCollectedCatchment: 0
+  iHaveNotBeenCollectedSuction: 0
+  immovableMass: 5000
+  moveableMass: 5
+  KnowledgeAcquired: {fileID: 0}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!1 &1608103965
 GameObject:
   m_ObjectHideFlags: 0
