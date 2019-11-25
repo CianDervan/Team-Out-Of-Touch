@@ -71,7 +71,7 @@ public class KnowGrab : MonoBehaviour
     public int immovableMass;
     public int moveableMass;
 
-    public GameObject KnowledgeAcquired;
+   public GameObject KnowledgeAcquired;
 
     private Vector3 lastPos;
     

@@ -6,13 +6,13 @@ public class newJoystickControl : MonoBehaviour
 {/*
     public Joystick joystick;
     //public Joybutton joybutton;
-    
-   
+
+
     public float veloRate = 2500f;
     public float addForceRate = 25000;
 
     public FixedTouchField TouchField;
-    
+
     public float CameraAngleX;
     public float CameraAngleSpeed = 0.2f;
 
@@ -27,7 +27,7 @@ public class newJoystickControl : MonoBehaviour
     private Vector3 oldDirection;
     private Vector3 adjustment = new Vector3(0, 0, .0003f);
     private Vector3 stayStill = new Vector3(0, 0, 0);
-    
+
     public float turnSpeed = 20;
 
     public float smoothSpeed = 10f;
@@ -55,44 +55,44 @@ public class newJoystickControl : MonoBehaviour
                      // myRb.velocity = new Vector3(joystick.Horizontal * veloRate, myRb.velocity.y, joystick.Vertical * veloRate);
                     // make character face same direction as camera
                    // myRb.transform.rotation = Quaternion.LookRotation(transform.position + Vector3.up - Camera.main.transform.position, Vector3.up);
-     
+
       // make character face same direction as joystick with smooth transition
       lookDirection = (new Vector3(rightDirection.x, 0, rightDirection.z));
       // determine method of rotation
       if ( rightDirection.x != 0 || rightDirection.y != 0) {
- 
+
           // create a smooth direction to look at using Slerp()
           Vector3 smoothDir = Vector3.Slerp(transform.forward, lookDirection, turnSpeed * Time.deltaTime);
           //Vector3 smoothDir = Vector3.Slerp(transform.forward, lookDirection, turnSpeed * Time.deltaTime);
-          
+
         // float turn = Input.GetAxis("Horizontal");
          //myRb.AddTorque(transform.up * turnSpeed * turn);
-          
+
          // Vector3 smoothDir = Vector3.Slerp(transform.forward, rightDirection, turnSpeed * Time.deltaTime);
- 
+
           transform.rotation = Quaternion.LookRotation (smoothDir);
           //myRb.AddTorque (Quaternion.LookRotation (smoothDir), ;
           // store the current smooth direction to use when the player is not providing input, otherwise snaps back to original rotation
           oldDirection = smoothDir;
-          
+
           // slippery add force method
           //myRb.AddForce(new Vector3(rightDirection.x, 0, rightDirection.z) * (addForceRate * Time.deltaTime));
-          
+
           //add arbitrary velocity method
-          myRb.velocity = rightDirection * (veloRate * Time.deltaTime); 
+          myRb.velocity = rightDirection * (veloRate * Time.deltaTime);
         }
       else
       {
 
           transform.rotation = Quaternion.LookRotation(oldDirection + adjustment);
-          
+
           // slippery add force method
           //myRb.AddForce(new Vector3(rightDirection.x, 0, rightDirection.z) * (addForceRate * Time.deltaTime));
-          
+
           // do not slide around
-          //myRb.velocity = stayStill;//rightDirection * (veloRate * Time.deltaTime); 
+          //myRb.velocity = stayStill;//rightDirection * (veloRate * Time.deltaTime);
       }
-        
+
     }
 
     void FixedUpdate()
@@ -100,7 +100,7 @@ public class newJoystickControl : MonoBehaviour
         move();
         // calculate camera relative direction
         CamForward = Vector3.Scale(mainCam.forward, new Vector3(1, 0, 1)).normalized;
-        
+
         //camera swipe
         CameraAngleX += TouchField.TouchDist.x * CameraAngleSpeed;
 
@@ -109,19 +109,12 @@ public class newJoystickControl : MonoBehaviour
                                                      // * new Vector3(0, 12, -30),
                                                    //transform.position + Quaternion.AngleAxis(CameraAngleX, Vector3.up)
                                                    //   * new Vector3(0, 12, -30), smoothSpeed * Time.deltaTime);
-                                                   
+
       Vector3 desiredPosition = transform.position + Quaternion.AngleAxis(CameraAngleX, Vector3.up) * new Vector3(0, 12, -30);
-      Camera.main.transform.position = desiredPosition;                                             
+      Camera.main.transform.position = desiredPosition;
      // Camera.main.transform.position = transform.position + Quaternion.AngleAxis(CameraAngleX, Vector3.up) * new Vector3(0, 12, -30);
       Camera.main.transform.rotation = Quaternion.LookRotation(transform.position + Vector3.up * 7f - Camera.main.transform.position, Vector3.up);
-<<<<<<< HEAD
-     // Vector3 desiredPosition = transform.position + Quaternion.AngleAxis(CameraAngleX, Vector3.up) * offset;
-     Vector3 smoothedPosition = Vector3.Lerp(Camera.main.transform.position, desiredPosition, smoothSpeed * Time.deltaTime);
-     // Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed * Time.deltaTime);
-      Camera.main.transform.position = smoothedPosition;
-      //transform.position = smoothedPosition;
-=======
- 
+
     }*/
 
     public GameObject LegRotationObject;
@@ -165,7 +158,7 @@ public class newJoystickControl : MonoBehaviour
         //joybutton = FindObjectOfType<Joybutton>();
         // }
 
-        LegRotationObject.SetActive(false);    
+        LegRotationObject.SetActive(false);
     }
 
     void FixedUpdate()
@@ -236,6 +229,5 @@ public class newJoystickControl : MonoBehaviour
         Camera.main.transform.position = transform.position + Quaternion.AngleAxis(CameraAngleX, Vector3.up) * new Vector3(0, 12, -30);
         Camera.main.transform.rotation = Quaternion.LookRotation(transform.position + Vector3.up * 7f - Camera.main.transform.position, Vector3.up);
 
->>>>>>> f24769ed8d2b7f60ef9866fb8dd5e21f3793f76e
     }
 }
