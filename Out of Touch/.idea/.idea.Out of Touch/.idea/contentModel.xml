@@ -146,6 +146,7 @@
             <e p="buttonGrabLG.cs" t="Include" />
             <e p="ButtonTouchInput.cs" t="Include" />
             <e p="Catapult.cs" t="Include" />
+            <e p="changeParent.cs" t="Include" />
             <e p="CleanGrab.cs" t="Include" />
             <e p="HideAndReplace.cs" t="Include" />
             <e p="KnowGrab.cs" t="Include" />
@@ -187,6 +188,7 @@
             <e p="ThrowSimulation.cs" t="Include" />
           </e>
           <e p="Other" t="Include">
+            <e p="Lift.cs" t="Include" />
             <e p="OrbitCam.cs" t="Include" />
           </e>
           <e p="Tutorial" t="Include">
