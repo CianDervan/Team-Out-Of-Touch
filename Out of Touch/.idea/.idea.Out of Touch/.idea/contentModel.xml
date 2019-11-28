@@ -7,10 +7,16 @@
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="Elevator.cs" t="Include" />
         <e p="GameManager.cs" t="Include" />
-        <e p="HideAndReplace.cs" t="Include" />
-        <e p="MatchRightHand.cs" t="Include" />
-        <e p="OrbitCam.cs" t="Include" />
+        <e p="PolygonPrototype" t="Include">
+          <e p="Shaders" t="Include">
+            <e p="Prototype_Glass_Global.shader" t="Include" />
+            <e p="Prototype_Glass_Object.shader" t="Include" />
+            <e p="Prototype_Global.shader" t="Include" />
+            <e p="Prototype_Object.shader" t="Include" />
+          </e>
+        </e>
         <e p="ProCore" t="Include">
           <e p="ProBuilder" t="Include">
             <e p="About" t="Include">
@@ -135,24 +141,22 @@
             </e>
           </e>
         </e>
-        <e p="Rotate.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="Interaction" t="Include">
             <e p="buttonGrabLG.cs" t="Include" />
             <e p="ButtonTouchInput.cs" t="Include" />
             <e p="Catapult.cs" t="Include" />
-            <e p="ColGrabNRelease.cs" t="Include" />
-            <e p="CollisionGrab.cs" t="Include" />
-            <e p="KGrabNew.cs" t="Include" />
+            <e p="changeParent.cs" t="Include" />
+            <e p="CleanGrab.cs" t="Include" />
+            <e p="HideAndReplace.cs" t="Include" />
             <e p="KnowGrab.cs" t="Include" />
-            <e p="NewJointGrab.cs" t="Include" />
+            <e p="MatchRightHand.cs" t="Include" />
             <e p="RagdollControl.cs" t="Include" />
             <e p="RaiseHands.cs" t="Include" />
             <e p="rotAround.cs" t="Include" />
+            <e p="Rotate.cs" t="Include" />
             <e p="SnapObject.cs" t="Include" />
             <e p="stayInPlace.cs" t="Include" />
-            <e p="Target.cs" t="Include" />
-            <e p="TouchInput.cs" t="Include" />
           </e>
           <e p="Know System" t="Include">
             <e p="knowledgeEventSystem.cs" t="Include" />
@@ -170,6 +174,8 @@
             <e p="ResumeButton.cs" t="Include" />
           </e>
           <e p="Movement" t="Include">
+            <e p="DarraghCharacterMovementScript.cs" t="Include" />
+            <e p="DarraghRagdollMovementControl.cs" t="Include" />
             <e p="JointFollowAnimRot.cs" t="Include" />
             <e p="newJoystickControl.cs" t="Include" />
             <e p="Player.cs" t="Include" />
@@ -180,6 +186,15 @@
             <e p="smoothCamFollow.cs" t="Include" />
             <e p="SphereCaster.cs" t="Include" />
             <e p="ThrowSimulation.cs" t="Include" />
+          </e>
+          <e p="Other" t="Include">
+            <e p="Lift.cs" t="Include" />
+            <e p="OrbitCam.cs" t="Include" />
+          </e>
+          <e p="Tutorial" t="Include">
+            <e p="TutorialGrab.cs" t="Include" />
+            <e p="TutorialManager.cs" t="Include" />
+            <e p="TutorialTimer.cs" t="Include" />
           </e>
           <e p="UI" t="Include">
             <e p="ColourLerp.cs" t="Include" />
@@ -195,14 +210,18 @@
             <e p="buttonHands.cs" t="Include" />
             <e p="cameraShake.cs" t="Include" />
             <e p="CharacterMovement.cs" t="Include" />
+            <e p="ColGrabNRelease.cs" t="Include" />
+            <e p="CollisionGrab.cs" t="Include" />
             <e p="GrabbingScript.cs" t="Include" />
             <e p="grabLetgo.cs" t="Include" />
             <e p="HingeJointTarget.cs" t="Include" />
             <e p="impactForce.cs" t="Include" />
             <e p="interactableItem.cs" t="Include" />
+            <e p="KGrabNew.cs" t="Include" />
             <e p="KnowManager.cs" t="Include" />
             <e p="KnowNewInfo.cs" t="Include" />
             <e p="KnowUI.cs" t="Include" />
+            <e p="NewJointGrab.cs" t="Include" />
             <e p="newJoyRight.cs" t="Include" />
             <e p="pushPull.cs" t="Include" />
             <e p="rayCastDrag.cs" t="Include" />
@@ -210,6 +229,8 @@
             <e p="SimplePickUp.cs" t="Include" />
             <e p="superAnimate.cs" t="Include" />
             <e p="superMovement.cs" t="Include" />
+            <e p="Target.cs" t="Include" />
+            <e p="TouchInput.cs" t="Include" />
           </e>
         </e>
         <e p="Z.Imports Etc_" t="Include">

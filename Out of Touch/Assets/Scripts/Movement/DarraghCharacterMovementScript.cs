@@ -5,29 +5,31 @@ using UnityEngine;
 public class DarraghCharacterMovementScript : MonoBehaviour
 {
 
-    public HingeJoint HJ;
-    public Transform pos;
-    public bool Inveter;
+    public HingeJoint MHJ;
+    public Transform Mpos;
+    public bool MInveter;
+
+    //public Transform IPos;
 
     // Update is called once per frame
     void Update()
     {
-        JointSpring JS = HJ.spring;
+        JointSpring JS = MHJ.spring;
 
-        JS.targetPosition = pos.transform.localEulerAngles.x;
+        JS.targetPosition = Mpos.transform.localEulerAngles.x;
 
         if (JS.targetPosition > 180)
         {
             JS.targetPosition = JS.targetPosition - 360;
         }
 
-        JS.targetPosition = Mathf.Clamp(JS.targetPosition, HJ.limits.min + 5, HJ.limits.max - 5);
+        JS.targetPosition = Mathf.Clamp(JS.targetPosition, MHJ.limits.min + 5, MHJ.limits.max - 5);
 
-        if (Inveter)
+        if (MInveter)
         {
             JS.targetPosition = JS.targetPosition * -1;
         }
 
-        HJ.spring = JS;
+        MHJ.spring = JS;
     }
 }

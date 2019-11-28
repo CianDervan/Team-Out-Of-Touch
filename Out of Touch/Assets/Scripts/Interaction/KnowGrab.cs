@@ -71,6 +71,8 @@ public class KnowGrab : MonoBehaviour
     public int immovableMass;
     public int moveableMass;
 
+   public GameObject KnowledgeAcquired;
+
     private Vector3 lastPos;
     
     [SerializeField]
@@ -87,6 +89,12 @@ public class KnowGrab : MonoBehaviour
         //originalColor = objectToGrab.GetComponent<Renderer>().material.color;
     }
 
+    IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(5.0f);
+        KnowledgeAcquired.SetActive(false);
+    }
+
     private void LateUpdate()
     {
         lastPos = transform.position;
@@ -96,6 +104,8 @@ public class KnowGrab : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Rooftop"))
         {
+
+            KnowledgeAcquired.SetActive(true);
             objectToGrab = other.gameObject;
             //objectToGrab.GetComponent<Renderer>().material.color = Color.green;
             //originalColor = objectToGrab.gameObject.GetComponent<Renderer>().material.color;
@@ -157,7 +167,8 @@ public class KnowGrab : MonoBehaviour
                    showRawImage = true;
                    if (showRawImage)
                    {
-                       myFlyOCameraOne.SetActive(true);
+                        KnowledgeAcquired.SetActive(true);
+                       //myFlyOCameraOne.SetActive(true);
                        //StartCoroutine(ShowAndHideTwo(flyOverOne, 14.0f));
                        flyOverOne.enabled = true;
                        flyOverOneButton.SetActive(true);
@@ -187,6 +198,8 @@ public class KnowGrab : MonoBehaviour
         }
         if (other.gameObject.CompareTag("Storage"))
         {
+            KnowledgeAcquired.SetActive(true);
+            StartCoroutine(Wait());
             objectToGrab = other.gameObject;
 
             if (objectToGrab != null)
@@ -216,7 +229,7 @@ public class KnowGrab : MonoBehaviour
                     showRawImage = true;
                     if (showRawImage)
                     {
-                        myFlyOCameraTwo.SetActive(true);
+                        //myFlyOCameraTwo.SetActive(true);
                         //StartCoroutine(ShowAndHideTwo(flyOverTwo, 14.0f));
                         flyOverTwo.enabled = true;
                         flyOverTwoButton.SetActive(true);
@@ -247,6 +260,8 @@ public class KnowGrab : MonoBehaviour
         }
         if (other.gameObject.CompareTag("Catchment"))
         {
+            KnowledgeAcquired.SetActive(true);
+            StartCoroutine(Wait());
             objectToGrab = other.gameObject;
 
             if (objectToGrab != null)
@@ -277,7 +292,7 @@ public class KnowGrab : MonoBehaviour
                     showRawImage = true;
                     if (showRawImage)
                     {
-                        myFlyOCameraThree.SetActive(true);
+                        //myFlyOCameraThree.SetActive(true);
                         //StartCoroutine(ShowAndHideTwo(flyOverThree, 14.0f));
                         flyOverThree.enabled = true;
                         flyOverThreeButton.SetActive(true);
@@ -307,6 +322,8 @@ public class KnowGrab : MonoBehaviour
         }
         if (other.gameObject.CompareTag("Suction"))
         {
+            KnowledgeAcquired.SetActive(true);
+            StartCoroutine(Wait());
             objectToGrab = other.gameObject;
 
             if (objectToGrab != null)
@@ -337,7 +354,7 @@ public class KnowGrab : MonoBehaviour
                     showRawImage = true;
                     if (showRawImage)
                     {
-                        myFlyOCameraFour.SetActive(true);
+                        //myFlyOCameraFour.SetActive(true);
                         //StartCoroutine(ShowAndHideTwo(flyOverFour, 14.0f));
                         flyOverFour.enabled = true;
                         flyOverFourButton.SetActive(true);
@@ -367,6 +384,9 @@ public class KnowGrab : MonoBehaviour
         }
                     if (other.gameObject.CompareTag("Interactable"))
                     {
+                        KnowledgeAcquired.SetActive(true);
+                        StartCoroutine(Wait());
+
                         holdOnTight = other.gameObject;
 
                         if (holdOnTight != null)

@@ -22,6 +22,9 @@ public class GameManager : MonoBehaviour
 
     public GameObject EndKMenuBackground;
     public GameObject KMenuObject;
+
+   // public GameObject ControlsCanvas;
+  //  public Camera beginCamera;
     
    public void GameOver()
     {
@@ -60,18 +63,6 @@ public class GameManager : MonoBehaviour
        //Invoke("StopTime", gameOverDelay);
    }
 
-   public void Restart()
-   {
-       SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-       Time.timeScale = 1;
-       Score.canCount = true;
-   }
-   
-   public void QuitGame()
-   {
-       Application.Quit();
-   }
-
    public void KnowledgeMenuAccess()
    {
        //if (YouWonUIPanel || YouLostUIPanel)
@@ -99,4 +90,47 @@ public class GameManager : MonoBehaviour
        Time.timeScale = 1f;
        Score.canCount = true;
    }
+
+   public void Restart()
+   {
+       SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+       Time.timeScale = 1;
+       Score.canCount = true;
+   }
+   
+   public void QuitGame()
+   {
+       Application.Quit();
+   }
+
+   public void MenuMain()
+   {
+       Score.canCount = false;
+       //ControlsCanvas.SetActive(false);
+       //beginCamera.enabled = true;
+
+   }
+   
+   public void ReturnToMainMenu()
+   {
+       SceneManager.LoadScene(sceneBuildIndex:0);
+       //Time.timeScale = 1;
+       //Score.canCount = true;
+   }
+
+   public void BeginTutorial()
+   {
+       SceneManager.LoadScene(sceneBuildIndex:1);
+      // beginCamera.enabled = false;
+       //Score.canCount = false;
+   }
+   
+   public void BeginGame()
+   {
+       SceneManager.LoadScene(sceneBuildIndex:2);
+       //Time.timeScale = 1;
+       //Score.canCount = true;
+   }
+
+   
 }
