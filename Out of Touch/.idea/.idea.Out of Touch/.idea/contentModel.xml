@@ -178,6 +178,7 @@
             <e p="DarraghRagdollMovementControl.cs" t="Include" />
             <e p="JointFollowAnimRot.cs" t="Include" />
             <e p="newJoystickControl.cs" t="Include" />
+            <e p="NewSCaster.cs" t="Include" />
             <e p="Player.cs" t="Include" />
             <e p="PlayerCollider.cs" t="Include" />
             <e p="PlayerController.cs" t="Include" />
