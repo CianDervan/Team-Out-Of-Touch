@@ -127,6 +127,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1371688795}
     m_Modifications:
+    - target: {fileID: 2297020046046725982, guid: 498d04163f3c9584bb9c6f84a44cbf8e,
+        type: 3}
+      propertyPath: m_Name
+      value: Set of Rotators 1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2297020046046725982, guid: 498d04163f3c9584bb9c6f84a44cbf8e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7736551514189786474, guid: 498d04163f3c9584bb9c6f84a44cbf8e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -196,16 +206,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2297020046046725982, guid: 498d04163f3c9584bb9c6f84a44cbf8e,
-        type: 3}
-      propertyPath: m_Name
-      value: Set of Rotators 1 (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2297020046046725982, guid: 498d04163f3c9584bb9c6f84a44cbf8e,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 498d04163f3c9584bb9c6f84a44cbf8e, type: 3}
@@ -2565,8 +2565,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LegRotationObject: {fileID: 0}
+  LegIdleObject: {fileID: 0}
   joystick: {fileID: 0}
   LegAnimator: {fileID: 0}
+  LegIdleAnimator: {fileID: 0}
   veloRate: 25
   addForceRate: 25000
   TouchField: {fileID: 0}
@@ -4292,6 +4294,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2297020046046725982, guid: 498d04163f3c9584bb9c6f84a44cbf8e,
+        type: 3}
+      propertyPath: m_Name
+      value: Set of Rotators 1 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2297020046046725982, guid: 498d04163f3c9584bb9c6f84a44cbf8e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7736551514189786474, guid: 498d04163f3c9584bb9c6f84a44cbf8e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4346,16 +4358,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2297020046046725982, guid: 498d04163f3c9584bb9c6f84a44cbf8e,
-        type: 3}
-      propertyPath: m_Name
-      value: Set of Rotators 1 (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2297020046046725982, guid: 498d04163f3c9584bb9c6f84a44cbf8e,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6713535990681363923, guid: 498d04163f3c9584bb9c6f84a44cbf8e,
         type: 3}
@@ -5712,6 +5714,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 122588158}
     m_Modifications:
+    - target: {fileID: 100000, guid: 9f00cae941aaaa142ade9d9171b47d06, type: 3}
+      propertyPath: m_Name
+      value: SM_Buildings_Floor_2x2_01P (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9f00cae941aaaa142ade9d9171b47d06, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9f00cae941aaaa142ade9d9171b47d06, type: 3}
       propertyPath: m_LocalPosition.x
       value: -472.96
@@ -5767,14 +5777,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 9f00cae941aaaa142ade9d9171b47d06, type: 3}
       propertyPath: m_LocalScale.z
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 9f00cae941aaaa142ade9d9171b47d06, type: 3}
-      propertyPath: m_Name
-      value: SM_Buildings_Floor_2x2_01P (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 9f00cae941aaaa142ade9d9171b47d06, type: 3}
-      propertyPath: m_Layer
-      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 9f00cae941aaaa142ade9d9171b47d06, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -6514,6 +6516,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2297020046046725982, guid: 498d04163f3c9584bb9c6f84a44cbf8e,
+        type: 3}
+      propertyPath: m_Name
+      value: Set of Rotators 1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2297020046046725982, guid: 498d04163f3c9584bb9c6f84a44cbf8e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7736551514189786474, guid: 498d04163f3c9584bb9c6f84a44cbf8e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6568,16 +6580,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2297020046046725982, guid: 498d04163f3c9584bb9c6f84a44cbf8e,
-        type: 3}
-      propertyPath: m_Name
-      value: Set of Rotators 1 (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2297020046046725982, guid: 498d04163f3c9584bb9c6f84a44cbf8e,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6713535990681363923, guid: 498d04163f3c9584bb9c6f84a44cbf8e,
         type: 3}
@@ -11835,6 +11837,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 100000, guid: 1814c5a2e1817d745a0616837e37dd7b, type: 3}
+      propertyPath: m_Name
+      value: SM_Buildings_Floor_5x5_01 (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1814c5a2e1817d745a0616837e37dd7b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1347.9
@@ -11890,10 +11896,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 1814c5a2e1817d745a0616837e37dd7b, type: 3}
       propertyPath: m_LocalScale.z
       value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 1814c5a2e1817d745a0616837e37dd7b, type: 3}
-      propertyPath: m_Name
-      value: SM_Buildings_Floor_5x5_01 (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1814c5a2e1817d745a0616837e37dd7b, type: 3}
@@ -12676,8 +12678,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LegRotationObject: {fileID: 0}
+  LegIdleObject: {fileID: 0}
   joystick: {fileID: 0}
   LegAnimator: {fileID: 0}
+  LegIdleAnimator: {fileID: 0}
   veloRate: 8
   addForceRate: 25000
   TouchField: {fileID: 0}
@@ -13569,8 +13573,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LegRotationObject: {fileID: 0}
+  LegIdleObject: {fileID: 0}
   joystick: {fileID: 0}
   LegAnimator: {fileID: 0}
+  LegIdleAnimator: {fileID: 0}
   veloRate: 8
   addForceRate: 25000
   TouchField: {fileID: 0}
@@ -14522,8 +14528,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LegRotationObject: {fileID: 0}
+  LegIdleObject: {fileID: 0}
   joystick: {fileID: 0}
   LegAnimator: {fileID: 0}
+  LegIdleAnimator: {fileID: 0}
   veloRate: 8
   addForceRate: 25000
   TouchField: {fileID: 0}
@@ -16796,8 +16804,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LegRotationObject: {fileID: 0}
+  LegIdleObject: {fileID: 0}
   joystick: {fileID: 0}
   LegAnimator: {fileID: 0}
+  LegIdleAnimator: {fileID: 0}
   veloRate: 8
   addForceRate: 25000
   TouchField: {fileID: 0}
@@ -21418,6 +21428,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1371688795}
     m_Modifications:
+    - target: {fileID: 2028517414991778627, guid: 3f35e669bbc1fed43aeccca0dfa36c90,
+        type: 3}
+      propertyPath: m_Name
+      value: constructionsite 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2028517414991778627, guid: 3f35e669bbc1fed43aeccca0dfa36c90,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2028517414991778628, guid: 3f35e669bbc1fed43aeccca0dfa36c90,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -21487,16 +21507,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.2000001
-      objectReference: {fileID: 0}
-    - target: {fileID: 2028517414991778627, guid: 3f35e669bbc1fed43aeccca0dfa36c90,
-        type: 3}
-      propertyPath: m_Name
-      value: constructionsite 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2028517414991778627, guid: 3f35e669bbc1fed43aeccca0dfa36c90,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8591608932239094975, guid: 3f35e669bbc1fed43aeccca0dfa36c90,
         type: 3}
@@ -22743,8 +22753,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LegRotationObject: {fileID: 0}
+  LegIdleObject: {fileID: 0}
   joystick: {fileID: 696044504}
   LegAnimator: {fileID: 0}
+  LegIdleAnimator: {fileID: 0}
   veloRate: 1000
   addForceRate: 60000
   TouchField: {fileID: 395587284}
@@ -23365,8 +23377,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LegRotationObject: {fileID: 0}
+  LegIdleObject: {fileID: 0}
   joystick: {fileID: 0}
   LegAnimator: {fileID: 0}
+  LegIdleAnimator: {fileID: 0}
   veloRate: 25
   addForceRate: 25000
   TouchField: {fileID: 0}
@@ -32266,8 +32280,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LegRotationObject: {fileID: 0}
+  LegIdleObject: {fileID: 0}
   joystick: {fileID: 0}
   LegAnimator: {fileID: 0}
+  LegIdleAnimator: {fileID: 0}
   veloRate: 2500
   addForceRate: 25000
   TouchField: {fileID: 0}
@@ -34125,6 +34141,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 187392435}
     m_Modifications:
+    - target: {fileID: 100000, guid: 9f00cae941aaaa142ade9d9171b47d06, type: 3}
+      propertyPath: m_Name
+      value: SM_Buildings_Floor_2x2_01P (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9f00cae941aaaa142ade9d9171b47d06, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9f00cae941aaaa142ade9d9171b47d06, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.996859
@@ -34180,14 +34204,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 9f00cae941aaaa142ade9d9171b47d06, type: 3}
       propertyPath: m_LocalScale.z
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 9f00cae941aaaa142ade9d9171b47d06, type: 3}
-      propertyPath: m_Name
-      value: SM_Buildings_Floor_2x2_01P (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 9f00cae941aaaa142ade9d9171b47d06, type: 3}
-      propertyPath: m_Layer
-      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 9f00cae941aaaa142ade9d9171b47d06, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -34819,6 +34835,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 122588158}
     m_Modifications:
+    - target: {fileID: 100000, guid: 9f00cae941aaaa142ade9d9171b47d06, type: 3}
+      propertyPath: m_Name
+      value: Elevator (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9f00cae941aaaa142ade9d9171b47d06, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9f00cae941aaaa142ade9d9171b47d06, type: 3}
       propertyPath: m_LocalPosition.x
       value: -433.91
@@ -34874,14 +34898,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 9f00cae941aaaa142ade9d9171b47d06, type: 3}
       propertyPath: m_LocalScale.z
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 9f00cae941aaaa142ade9d9171b47d06, type: 3}
-      propertyPath: m_Name
-      value: Elevator (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 9f00cae941aaaa142ade9d9171b47d06, type: 3}
-      propertyPath: m_Layer
-      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 9f00cae941aaaa142ade9d9171b47d06, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -40621,6 +40637,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1371688795}
     m_Modifications:
+    - target: {fileID: 2929252283123773939, guid: aaa2c939c0359ac4dbce3f49e8b90252,
+        type: 3}
+      propertyPath: m_Name
+      value: Fixed Joystick (Right)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2929252283123773939, guid: aaa2c939c0359ac4dbce3f49e8b90252,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -40740,16 +40766,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.01921875
-      objectReference: {fileID: 0}
-    - target: {fileID: 2929252283123773939, guid: aaa2c939c0359ac4dbce3f49e8b90252,
-        type: 3}
-      propertyPath: m_Name
-      value: Fixed Joystick (Right)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2929252283123773939, guid: aaa2c939c0359ac4dbce3f49e8b90252,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
@@ -44037,8 +44053,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LegRotationObject: {fileID: 0}
+  LegIdleObject: {fileID: 0}
   joystick: {fileID: 0}
   LegAnimator: {fileID: 0}
+  LegIdleAnimator: {fileID: 0}
   veloRate: 2500
   addForceRate: 25000
   TouchField: {fileID: 0}
@@ -45853,6 +45871,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 105108942}
     m_Modifications:
+    - target: {fileID: 2929252283123773939, guid: aaa2c939c0359ac4dbce3f49e8b90252,
+        type: 3}
+      propertyPath: m_Name
+      value: Fixed Joystick
+      objectReference: {fileID: 0}
+    - target: {fileID: 2929252283123773939, guid: aaa2c939c0359ac4dbce3f49e8b90252,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -45957,16 +45985,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2929252283123773939, guid: aaa2c939c0359ac4dbce3f49e8b90252,
-        type: 3}
-      propertyPath: m_Name
-      value: Fixed Joystick
-      objectReference: {fileID: 0}
-    - target: {fileID: 2929252283123773939, guid: aaa2c939c0359ac4dbce3f49e8b90252,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2929252283123773951, guid: aaa2c939c0359ac4dbce3f49e8b90252,
         type: 3}
@@ -48555,8 +48573,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LegRotationObject: {fileID: 0}
+  LegIdleObject: {fileID: 0}
   joystick: {fileID: 0}
   LegAnimator: {fileID: 0}
+  LegIdleAnimator: {fileID: 0}
   veloRate: 8
   addForceRate: 25000
   TouchField: {fileID: 0}
@@ -49050,6 +49070,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 122588158}
     m_Modifications:
+    - target: {fileID: 100000, guid: 9f00cae941aaaa142ade9d9171b47d06, type: 3}
+      propertyPath: m_Name
+      value: Elevator
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9f00cae941aaaa142ade9d9171b47d06, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9f00cae941aaaa142ade9d9171b47d06, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9f00cae941aaaa142ade9d9171b47d06, type: 3}
       propertyPath: m_LocalPosition.x
       value: -433.91003
@@ -49105,18 +49137,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 9f00cae941aaaa142ade9d9171b47d06, type: 3}
       propertyPath: m_LocalScale.z
       value: 11.065335
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 9f00cae941aaaa142ade9d9171b47d06, type: 3}
-      propertyPath: m_Name
-      value: Elevator
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 9f00cae941aaaa142ade9d9171b47d06, type: 3}
-      propertyPath: m_Layer
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 9f00cae941aaaa142ade9d9171b47d06, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 9f00cae941aaaa142ade9d9171b47d06, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -49729,6 +49749,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 100000, guid: 1814c5a2e1817d745a0616837e37dd7b, type: 3}
+      propertyPath: m_Name
+      value: SM_Buildings_Floor_5x5_01
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1814c5a2e1817d745a0616837e37dd7b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1437.9
@@ -49784,10 +49808,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 1814c5a2e1817d745a0616837e37dd7b, type: 3}
       propertyPath: m_LocalScale.z
       value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 1814c5a2e1817d745a0616837e37dd7b, type: 3}
-      propertyPath: m_Name
-      value: SM_Buildings_Floor_5x5_01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1814c5a2e1817d745a0616837e37dd7b, type: 3}
@@ -50265,15 +50285,15 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: a831f81acd267f14e9f20ae06478f331, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
+  m_audioClip: {fileID: 8300000, guid: 67327dd35669ccc40aec918cec50dc6f, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.58
+  m_Pitch: -1.22
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 152
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -51695,8 +51715,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LegRotationObject: {fileID: 0}
+  LegIdleObject: {fileID: 0}
   joystick: {fileID: 0}
   LegAnimator: {fileID: 0}
+  LegIdleAnimator: {fileID: 0}
   veloRate: 25
   addForceRate: 25000
   TouchField: {fileID: 0}
@@ -51903,8 +51925,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LegRotationObject: {fileID: 0}
+  LegIdleObject: {fileID: 0}
   joystick: {fileID: 0}
   LegAnimator: {fileID: 0}
+  LegIdleAnimator: {fileID: 0}
   veloRate: 25
   addForceRate: 25000
   TouchField: {fileID: 0}
@@ -52135,8 +52159,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LegRotationObject: {fileID: 0}
+  LegIdleObject: {fileID: 0}
   joystick: {fileID: 0}
   LegAnimator: {fileID: 0}
+  LegIdleAnimator: {fileID: 0}
   veloRate: 8
   addForceRate: 25000
   TouchField: {fileID: 0}
@@ -53927,8 +53953,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LegRotationObject: {fileID: 0}
+  LegIdleObject: {fileID: 0}
   joystick: {fileID: 0}
   LegAnimator: {fileID: 0}
+  LegIdleAnimator: {fileID: 0}
   veloRate: 25
   addForceRate: 25000
   TouchField: {fileID: 0}
@@ -61900,8 +61928,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LegRotationObject: {fileID: 0}
+  LegIdleObject: {fileID: 0}
   joystick: {fileID: 0}
   LegAnimator: {fileID: 0}
+  LegIdleAnimator: {fileID: 0}
   veloRate: 1000
   addForceRate: 60000
   TouchField: {fileID: 0}
@@ -62531,8 +62561,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LegRotationObject: {fileID: 0}
+  LegIdleObject: {fileID: 0}
   joystick: {fileID: 0}
   LegAnimator: {fileID: 0}
+  LegIdleAnimator: {fileID: 0}
   veloRate: 2500
   addForceRate: 25000
   TouchField: {fileID: 0}
@@ -71766,8 +71798,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LegRotationObject: {fileID: 0}
+  LegIdleObject: {fileID: 0}
   joystick: {fileID: 0}
   LegAnimator: {fileID: 0}
+  LegIdleAnimator: {fileID: 0}
   veloRate: 2500
   addForceRate: 25000
   TouchField: {fileID: 0}
