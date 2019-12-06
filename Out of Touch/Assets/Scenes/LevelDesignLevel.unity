@@ -221,6 +221,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1371688795}
     m_Modifications:
+    - target: {fileID: 2297020046046725982, guid: 498d04163f3c9584bb9c6f84a44cbf8e,
+        type: 3}
+      propertyPath: m_Name
+      value: Set of Rotators 1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2297020046046725982, guid: 498d04163f3c9584bb9c6f84a44cbf8e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7736551514189786474, guid: 498d04163f3c9584bb9c6f84a44cbf8e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -290,16 +300,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2297020046046725982, guid: 498d04163f3c9584bb9c6f84a44cbf8e,
-        type: 3}
-      propertyPath: m_Name
-      value: Set of Rotators 1 (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2297020046046725982, guid: 498d04163f3c9584bb9c6f84a44cbf8e,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 498d04163f3c9584bb9c6f84a44cbf8e, type: 3}
@@ -703,7 +703,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.000030517578, y: 0.40499824, z: 0.000010093051}
+  m_ConnectedAnchor: {x: 0, y: 0.40500015, z: 0.000005006789}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 0
@@ -2843,8 +2843,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LegRotationObject: {fileID: 0}
+  LegIdleObject: {fileID: 0}
   joystick: {fileID: 0}
   LegAnimator: {fileID: 0}
+  LegIdleAnimator: {fileID: 0}
   veloRate: 25
   addForceRate: 25000
   TouchField: {fileID: 0}
@@ -4485,7 +4487,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0.49999982, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.024418836, y: -0.21882847, z: -0.012353043}
+  m_ConnectedAnchor: {x: 0.024420345, y: -0.21869974, z: -0.01236914}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 0
@@ -4687,6 +4689,8 @@ MonoBehaviour:
   iHaveNotBeenCollectedSuction: 0
   immovableMass: 5000
   moveableMass: 5
+  KnowledgeAcquired: {fileID: 0}
+  KMenuObject: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 512
@@ -5075,6 +5079,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1142136653}
     m_Modifications:
+    - target: {fileID: 2297020046046725982, guid: 498d04163f3c9584bb9c6f84a44cbf8e,
+        type: 3}
+      propertyPath: m_Name
+      value: Set of Rotators 1 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2297020046046725982, guid: 498d04163f3c9584bb9c6f84a44cbf8e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7736551514189786474, guid: 498d04163f3c9584bb9c6f84a44cbf8e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5129,16 +5143,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2297020046046725982, guid: 498d04163f3c9584bb9c6f84a44cbf8e,
-        type: 3}
-      propertyPath: m_Name
-      value: Set of Rotators 1 (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2297020046046725982, guid: 498d04163f3c9584bb9c6f84a44cbf8e,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6713535990681363923, guid: 498d04163f3c9584bb9c6f84a44cbf8e,
         type: 3}
@@ -6738,6 +6742,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 38027724}
     m_Modifications:
+    - target: {fileID: 100000, guid: 9f00cae941aaaa142ade9d9171b47d06, type: 3}
+      propertyPath: m_Name
+      value: SM_Buildings_Floor_2x2_01P (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9f00cae941aaaa142ade9d9171b47d06, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9f00cae941aaaa142ade9d9171b47d06, type: 3}
       propertyPath: m_LocalPosition.x
       value: -472.96
@@ -6793,14 +6805,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 9f00cae941aaaa142ade9d9171b47d06, type: 3}
       propertyPath: m_LocalScale.z
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 9f00cae941aaaa142ade9d9171b47d06, type: 3}
-      propertyPath: m_Name
-      value: SM_Buildings_Floor_2x2_01P (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 9f00cae941aaaa142ade9d9171b47d06, type: 3}
-      propertyPath: m_Layer
-      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 9f00cae941aaaa142ade9d9171b47d06, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -7531,6 +7535,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 019d0b198f0037e45bdd0a1a52557e08, type: 3}
+--- !u!1 &212184108 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 109db952b00ed314e9cc190af5100868,
+    type: 3}
+  m_PrefabInstance: {fileID: 1514554822}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &212184109
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 212184108}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 3.6837673
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.3418837, z: 0}
 --- !u!1 &213102067 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4197062959373390704, guid: 37d766e4bccb41c4cbba24f599f1fe16,
@@ -7793,6 +7817,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1142136653}
     m_Modifications:
+    - target: {fileID: 2297020046046725982, guid: 498d04163f3c9584bb9c6f84a44cbf8e,
+        type: 3}
+      propertyPath: m_Name
+      value: Set of Rotators 1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2297020046046725982, guid: 498d04163f3c9584bb9c6f84a44cbf8e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7736551514189786474, guid: 498d04163f3c9584bb9c6f84a44cbf8e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7847,16 +7881,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2297020046046725982, guid: 498d04163f3c9584bb9c6f84a44cbf8e,
-        type: 3}
-      propertyPath: m_Name
-      value: Set of Rotators 1 (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2297020046046725982, guid: 498d04163f3c9584bb9c6f84a44cbf8e,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6713535990681363923, guid: 498d04163f3c9584bb9c6f84a44cbf8e,
         type: 3}
@@ -10039,6 +10063,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &284747475 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 109db952b00ed314e9cc190af5100868,
+    type: 3}
+  m_PrefabInstance: {fileID: 131104798}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &284747476
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 284747475}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.49401855
+  m_Height: 3.5107422
+  m_Direction: 1
+  m_Center: {x: 0.0059814453, y: 1.4582253, z: 0}
 --- !u!1 &285176929
 GameObject:
   m_ObjectHideFlags: 0
@@ -14074,7 +14118,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 1.0000001, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.000004402161, y: 0.121762075, z: 0.012946587}
+  m_ConnectedAnchor: {x: 0.0000006401352, y: 0.12184275, z: 0.012936503}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 0
@@ -14805,8 +14849,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LegRotationObject: {fileID: 0}
+  LegIdleObject: {fileID: 0}
   joystick: {fileID: 0}
   LegAnimator: {fileID: 0}
+  LegIdleAnimator: {fileID: 0}
   veloRate: 8
   addForceRate: 25000
   TouchField: {fileID: 0}
@@ -16195,8 +16241,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LegRotationObject: {fileID: 0}
+  LegIdleObject: {fileID: 0}
   joystick: {fileID: 0}
   LegAnimator: {fileID: 0}
+  LegIdleAnimator: {fileID: 0}
   veloRate: 8
   addForceRate: 25000
   TouchField: {fileID: 0}
@@ -17554,8 +17602,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LegRotationObject: {fileID: 0}
+  LegIdleObject: {fileID: 0}
   joystick: {fileID: 0}
   LegAnimator: {fileID: 0}
+  LegIdleAnimator: {fileID: 0}
   veloRate: 8
   addForceRate: 25000
   TouchField: {fileID: 0}
@@ -18625,6 +18675,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 65ebb9950643af640a5070a9367992d1, type: 3}
       propertyPath: m_Name
       value: SM_Buildings_Floor_2x2_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 65ebb9950643af640a5070a9367992d1, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 65ebb9950643af640a5070a9367992d1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -20275,8 +20329,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LegRotationObject: {fileID: 0}
+  LegIdleObject: {fileID: 0}
   joystick: {fileID: 0}
   LegAnimator: {fileID: 0}
+  LegIdleAnimator: {fileID: 0}
   veloRate: 8
   addForceRate: 25000
   TouchField: {fileID: 0}
@@ -22139,7 +22195,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.28884888, y: -0.40188783, z: -0.0115457745}
+  m_ConnectedAnchor: {x: -0.28889975, y: -0.40188974, z: -0.011549589}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 0
@@ -24002,6 +24058,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 100000, guid: de63f24a4ddd7ed43bccc07fe1648ef8, type: 3}
+      propertyPath: m_Name
+      value: SM_Icon_Warning_01 (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: de63f24a4ddd7ed43bccc07fe1648ef8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1110.2999
@@ -24057,10 +24117,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: de63f24a4ddd7ed43bccc07fe1648ef8, type: 3}
       propertyPath: m_LocalScale.z
       value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: de63f24a4ddd7ed43bccc07fe1648ef8, type: 3}
-      propertyPath: m_Name
-      value: SM_Icon_Warning_01 (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de63f24a4ddd7ed43bccc07fe1648ef8, type: 3}
@@ -24222,7 +24278,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: -0.5, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.000030517578, y: 0.31044334, z: 0.000010013578}
+  m_ConnectedAnchor: {x: 0, y: 0.31044525, z: 0.0000049273162}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 0
@@ -25156,7 +25212,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0.9999999, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.025492124, y: 0.121931694, z: 0.012946587}
+  m_ConnectedAnchor: {x: -0.025497166, y: 0.12185102, z: 0.012936503}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 0
@@ -25741,6 +25797,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1371688795}
     m_Modifications:
+    - target: {fileID: 2028517414991778627, guid: 3f35e669bbc1fed43aeccca0dfa36c90,
+        type: 3}
+      propertyPath: m_Name
+      value: constructionsite 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2028517414991778627, guid: 3f35e669bbc1fed43aeccca0dfa36c90,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2028517414991778628, guid: 3f35e669bbc1fed43aeccca0dfa36c90,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -25810,16 +25876,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.2000001
-      objectReference: {fileID: 0}
-    - target: {fileID: 2028517414991778627, guid: 3f35e669bbc1fed43aeccca0dfa36c90,
-        type: 3}
-      propertyPath: m_Name
-      value: constructionsite 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2028517414991778627, guid: 3f35e669bbc1fed43aeccca0dfa36c90,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8591608932239094975, guid: 3f35e669bbc1fed43aeccca0dfa36c90,
         type: 3}
@@ -26096,11 +26152,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f3726f6b6ec068d4a958b2e3a8c964f1, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f3726f6b6ec068d4a958b2e3a8c964f1, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: -0.07165113
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f3726f6b6ec068d4a958b2e3a8c964f1, type: 3}
       propertyPath: m_LocalRotation.z
@@ -26108,7 +26164,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f3726f6b6ec068d4a958b2e3a8c964f1, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.9974298
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f3726f6b6ec068d4a958b2e3a8c964f1, type: 3}
       propertyPath: m_RootOrder
@@ -26120,7 +26176,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f3726f6b6ec068d4a958b2e3a8c964f1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -8.218
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f3726f6b6ec068d4a958b2e3a8c964f1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -26221,6 +26277,133 @@ CapsuleCollider:
   m_Height: 1.4415379
   m_Direction: 1
   m_Center: {x: 0, y: 0.7207689, z: 0}
+--- !u!1 &804368586
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 804368588}
+  - component: {fileID: 804368587}
+  m_Layer: 0
+  m_Name: Audio Source
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &804368587
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 804368586}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 67327dd35669ccc40aec918cec50dc6f, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.68
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 152
+  DopplerLevel: 1.93
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0.22
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.3888889
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1.1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &804368588
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 804368586}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 459.05353, y: 217.40363, z: -781.7431}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 24
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &808186476
 GameObject:
   m_ObjectHideFlags: 0
@@ -26729,12 +26912,12 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: b0af2617781bfd14485530182462d45b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.1
+      value: -7.82
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: b0af2617781bfd14485530182462d45b,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: b0af2617781bfd14485530182462d45b,
         type: 3}
@@ -26759,7 +26942,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: b0af2617781bfd14485530182462d45b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 58
+      value: 57
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: b0af2617781bfd14485530182462d45b,
         type: 3}
@@ -27172,8 +27355,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LegRotationObject: {fileID: 0}
+  LegIdleObject: {fileID: 0}
   joystick: {fileID: 696044504}
   LegAnimator: {fileID: 0}
+  LegIdleAnimator: {fileID: 0}
   veloRate: 1000
   addForceRate: 60000
   TouchField: {fileID: 395587284}
@@ -27191,7 +27376,7 @@ SpringJoint:
   m_ConnectedBody: {fileID: 177562371}
   m_Anchor: {x: 0, y: 0.5, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 144.8999, y: -14.229994, z: 41.230003}
+  m_ConnectedAnchor: {x: 0, y: -14.250006, z: 0.0000076293945}
   serializedVersion: 2
   m_Spring: 10
   m_Damper: 100
@@ -27864,8 +28049,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LegRotationObject: {fileID: 0}
+  LegIdleObject: {fileID: 0}
   joystick: {fileID: 0}
   LegAnimator: {fileID: 0}
+  LegIdleAnimator: {fileID: 0}
   veloRate: 25
   addForceRate: 25000
   TouchField: {fileID: 0}
@@ -27935,6 +28122,26 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 6814431780893711860}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &851248929 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 109db952b00ed314e9cc190af5100868,
+    type: 3}
+  m_PrefabInstance: {fileID: 1435508828}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &851248930
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 851248929}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 3.5254593
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.2627296, z: 0}
 --- !u!1 &852093370
 GameObject:
   m_ObjectHideFlags: 0
@@ -28668,7 +28875,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.26665244, y: -0.40188783, z: -0.0115457745}
+  m_ConnectedAnchor: {x: 0.26668295, y: -0.40188974, z: -0.011549589}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 0
@@ -34204,6 +34411,26 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1062826176}
   m_Mesh: {fileID: 4300000, guid: 73282c0f90bcc6a45bf711cbfe956e50, type: 3}
+--- !u!1 &1064513633 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 109db952b00ed314e9cc190af5100868,
+    type: 3}
+  m_PrefabInstance: {fileID: 958561628}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &1064513634
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1064513633}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 3.5024147
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.2512074, z: 0}
 --- !u!23 &1065086464
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -35950,11 +36177,11 @@ Transform:
   - {fileID: 987850511}
   - {fileID: 668772750}
   - {fileID: 105108942}
+  - {fileID: 1401064792}
   - {fileID: 568617879}
   - {fileID: 1512311465}
   - {fileID: 555792823}
   - {fileID: 1879992684}
-  - {fileID: 1401064792}
   - {fileID: 190814767}
   - {fileID: 1136293646}
   - {fileID: 672106063}
@@ -38426,7 +38653,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.0050140396, y: -0.6976414, z: -0.01235244}
+  m_ConnectedAnchor: {x: 0.005091303, y: -0.69764286, z: -0.012365316}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 0
@@ -38846,8 +39073,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LegRotationObject: {fileID: 0}
+  LegIdleObject: {fileID: 0}
   joystick: {fileID: 0}
   LegAnimator: {fileID: 0}
+  LegIdleAnimator: {fileID: 0}
   veloRate: 2500
   addForceRate: 25000
   TouchField: {fileID: 0}
@@ -39632,7 +39861,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0.75, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.025423886, y: -0.13918903, z: 0.012946624}
+  m_ConnectedAnchor: {x: -0.025558295, y: -0.13919407, z: 0.01293654}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 0
@@ -40481,7 +40710,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0.75, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.00010588821, y: -0.13918903, z: 0.012946624}
+  m_ConnectedAnchor: {x: -0.000028599272, y: -0.13919407, z: 0.01293654}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 0
@@ -40726,6 +40955,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 187392435}
     m_Modifications:
+    - target: {fileID: 100000, guid: 9f00cae941aaaa142ade9d9171b47d06, type: 3}
+      propertyPath: m_Name
+      value: SM_Buildings_Floor_2x2_01P (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9f00cae941aaaa142ade9d9171b47d06, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9f00cae941aaaa142ade9d9171b47d06, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.996859
@@ -40781,14 +41018,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 9f00cae941aaaa142ade9d9171b47d06, type: 3}
       propertyPath: m_LocalScale.z
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 9f00cae941aaaa142ade9d9171b47d06, type: 3}
-      propertyPath: m_Name
-      value: SM_Buildings_Floor_2x2_01P (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 9f00cae941aaaa142ade9d9171b47d06, type: 3}
-      propertyPath: m_Layer
-      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 9f00cae941aaaa142ade9d9171b47d06, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -41582,6 +41811,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 38027724}
     m_Modifications:
+    - target: {fileID: 100000, guid: 9f00cae941aaaa142ade9d9171b47d06, type: 3}
+      propertyPath: m_Name
+      value: Elevator (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9f00cae941aaaa142ade9d9171b47d06, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9f00cae941aaaa142ade9d9171b47d06, type: 3}
       propertyPath: m_LocalPosition.x
       value: -433.91
@@ -41637,14 +41874,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 9f00cae941aaaa142ade9d9171b47d06, type: 3}
       propertyPath: m_LocalScale.z
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 9f00cae941aaaa142ade9d9171b47d06, type: 3}
-      propertyPath: m_Name
-      value: Elevator (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 9f00cae941aaaa142ade9d9171b47d06, type: 3}
-      propertyPath: m_Layer
-      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 9f00cae941aaaa142ade9d9171b47d06, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -41913,6 +42142,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 100000, guid: de63f24a4ddd7ed43bccc07fe1648ef8, type: 3}
+      propertyPath: m_Name
+      value: SM_Icon_Warning_01
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: de63f24a4ddd7ed43bccc07fe1648ef8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1122.89
@@ -41968,10 +42201,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: de63f24a4ddd7ed43bccc07fe1648ef8, type: 3}
       propertyPath: m_LocalScale.z
       value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: de63f24a4ddd7ed43bccc07fe1648ef8, type: 3}
-      propertyPath: m_Name
-      value: SM_Icon_Warning_01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de63f24a4ddd7ed43bccc07fe1648ef8, type: 3}
@@ -42242,7 +42471,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.000030517578, y: 0.28899953, z: 0.000010132787}
+  m_ConnectedAnchor: {x: 0, y: 0.28900144, z: 0.0000050465255}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 0
@@ -44042,7 +44271,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0.50000006, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.0000036405793, y: -0.21878515, z: -0.012353047}
+  m_ConnectedAnchor: {x: -0.0000051496277, y: -0.21870789, z: -0.012369144}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 0
@@ -46917,7 +47146,7 @@ Transform:
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 1142136653}
-  m_RootOrder: 32
+  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1401064793
 MonoBehaviour:
@@ -48073,6 +48302,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1371688795}
     m_Modifications:
+    - target: {fileID: 2929252283123773939, guid: aaa2c939c0359ac4dbce3f49e8b90252,
+        type: 3}
+      propertyPath: m_Name
+      value: Fixed Joystick (Right)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2929252283123773939, guid: aaa2c939c0359ac4dbce3f49e8b90252,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -48192,16 +48431,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.01921875
-      objectReference: {fileID: 0}
-    - target: {fileID: 2929252283123773939, guid: aaa2c939c0359ac4dbce3f49e8b90252,
-        type: 3}
-      propertyPath: m_Name
-      value: Fixed Joystick (Right)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2929252283123773939, guid: aaa2c939c0359ac4dbce3f49e8b90252,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
@@ -52368,8 +52597,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LegRotationObject: {fileID: 0}
+  LegIdleObject: {fileID: 0}
   joystick: {fileID: 0}
   LegAnimator: {fileID: 0}
+  LegIdleAnimator: {fileID: 0}
   veloRate: 2500
   addForceRate: 25000
   TouchField: {fileID: 0}
@@ -54505,6 +54736,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 105108942}
     m_Modifications:
+    - target: {fileID: 2929252283123773939, guid: aaa2c939c0359ac4dbce3f49e8b90252,
+        type: 3}
+      propertyPath: m_Name
+      value: Fixed Joystick
+      objectReference: {fileID: 0}
+    - target: {fileID: 2929252283123773939, guid: aaa2c939c0359ac4dbce3f49e8b90252,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -54609,16 +54850,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2929252283123773939, guid: aaa2c939c0359ac4dbce3f49e8b90252,
-        type: 3}
-      propertyPath: m_Name
-      value: Fixed Joystick
-      objectReference: {fileID: 0}
-    - target: {fileID: 2929252283123773939, guid: aaa2c939c0359ac4dbce3f49e8b90252,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2929252283123773951, guid: aaa2c939c0359ac4dbce3f49e8b90252,
         type: 3}
@@ -57351,7 +57582,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.49557495, y: 0.1659782, z: -0.011545894}
+  m_ConnectedAnchor: {x: 0.4955241, y: 0.16597879, z: -0.011552252}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 0
@@ -58270,8 +58501,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LegRotationObject: {fileID: 0}
+  LegIdleObject: {fileID: 0}
   joystick: {fileID: 0}
   LegAnimator: {fileID: 0}
+  LegIdleAnimator: {fileID: 0}
   veloRate: 8
   addForceRate: 25000
   TouchField: {fileID: 0}
@@ -58984,6 +59217,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 38027724}
     m_Modifications:
+    - target: {fileID: 100000, guid: 9f00cae941aaaa142ade9d9171b47d06, type: 3}
+      propertyPath: m_Name
+      value: Elevator
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9f00cae941aaaa142ade9d9171b47d06, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9f00cae941aaaa142ade9d9171b47d06, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9f00cae941aaaa142ade9d9171b47d06, type: 3}
       propertyPath: m_LocalPosition.x
       value: -433.91003
@@ -59039,18 +59284,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 9f00cae941aaaa142ade9d9171b47d06, type: 3}
       propertyPath: m_LocalScale.z
       value: 11.065335
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 9f00cae941aaaa142ade9d9171b47d06, type: 3}
-      propertyPath: m_Name
-      value: Elevator
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 9f00cae941aaaa142ade9d9171b47d06, type: 3}
-      propertyPath: m_Layer
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 9f00cae941aaaa142ade9d9171b47d06, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 9f00cae941aaaa142ade9d9171b47d06, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -59316,6 +59549,26 @@ Transform:
   m_Father: {fileID: 1142136653}
   m_RootOrder: 39
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1803453460 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 109db952b00ed314e9cc190af5100868,
+    type: 3}
+  m_PrefabInstance: {fileID: 1255325126}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &1803453461
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1803453460}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 3.4304485
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.2152243, z: 0}
 --- !u!1 &1803469908
 GameObject:
   m_ObjectHideFlags: 0
@@ -61659,8 +61912,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LegRotationObject: {fileID: 0}
+  LegIdleObject: {fileID: 0}
   joystick: {fileID: 0}
   LegAnimator: {fileID: 0}
+  LegIdleAnimator: {fileID: 0}
   veloRate: 25
   addForceRate: 25000
   TouchField: {fileID: 0}
@@ -61881,8 +62136,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LegRotationObject: {fileID: 0}
+  LegIdleObject: {fileID: 0}
   joystick: {fileID: 0}
   LegAnimator: {fileID: 0}
+  LegIdleAnimator: {fileID: 0}
   veloRate: 25
   addForceRate: 25000
   TouchField: {fileID: 0}
@@ -62142,8 +62399,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LegRotationObject: {fileID: 0}
+  LegIdleObject: {fileID: 0}
   joystick: {fileID: 0}
   LegAnimator: {fileID: 0}
+  LegIdleAnimator: {fileID: 0}
   veloRate: 8
   addForceRate: 25000
   TouchField: {fileID: 0}
@@ -64267,8 +64526,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LegRotationObject: {fileID: 0}
+  LegIdleObject: {fileID: 0}
   joystick: {fileID: 0}
   LegAnimator: {fileID: 0}
+  LegIdleAnimator: {fileID: 0}
   veloRate: 25
   addForceRate: 25000
   TouchField: {fileID: 0}
@@ -71067,7 +71328,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.4988912, y: 0.15633464, z: -0.011545894}
+  m_ConnectedAnchor: {x: -0.4988607, y: 0.15633273, z: -0.011549708}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 0
@@ -71861,7 +72122,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.0001013326, y: -0.6976414, z: -0.012352443}
+  m_ConnectedAnchor: {x: -0.00002746468, y: -0.69764286, z: -0.01236532}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 0
@@ -73642,8 +73903,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LegRotationObject: {fileID: 0}
+  LegIdleObject: {fileID: 0}
   joystick: {fileID: 0}
   LegAnimator: {fileID: 0}
+  LegIdleAnimator: {fileID: 0}
   veloRate: 1000
   addForceRate: 60000
   TouchField: {fileID: 0}
@@ -74273,8 +74536,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LegRotationObject: {fileID: 0}
+  LegIdleObject: {fileID: 0}
   joystick: {fileID: 0}
   LegAnimator: {fileID: 0}
+  LegIdleAnimator: {fileID: 0}
   veloRate: 2500
   addForceRate: 25000
   TouchField: {fileID: 0}
@@ -78845,7 +79110,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8296172669010830746}
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -333.38, y: -5.81, z: 2.77}
+  m_LocalPosition: {x: -333.38, y: -5.81, z: 3.9900002}
   m_LocalScale: {x: 0.5000001, y: 0.50000006, z: 0.50000006}
   m_Children: []
   m_Father: {fileID: 38027724}
@@ -78859,7 +79124,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8296172669437442075}
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -333.38, y: -4.7499995, z: 0.9599998}
+  m_LocalPosition: {x: -333.38, y: -4.7499995, z: 2.1800003}
   m_LocalScale: {x: 0.5000001, y: 0.50000006, z: 0.50000006}
   m_Children: []
   m_Father: {fileID: 38027724}
@@ -78873,7 +79138,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8296172669337390748}
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -333.38, y: -4.7450004, z: 4.655}
+  m_LocalPosition: {x: -333.38, y: -4.7450004, z: 5.8750005}
   m_LocalScale: {x: 0.5000001, y: 0.50000006, z: 0.50000006}
   m_Children: []
   m_Father: {fileID: 38027724}
@@ -78887,7 +79152,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8296172668779605890}
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -333.38, y: -3.6549997, z: 2.8199997}
+  m_LocalPosition: {x: -333.38, y: -3.6549997, z: 4.04}
   m_LocalScale: {x: 0.5000001, y: 0.50000006, z: 0.50000006}
   m_Children: []
   m_Father: {fileID: 38027724}
@@ -78929,7 +79194,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8296172668109766472}
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -333.38, y: -6.9350004, z: 0.9599993}
+  m_LocalPosition: {x: -333.38, y: -6.9350004, z: 2.1799998}
   m_LocalScale: {x: 0.5000001, y: 0.50000006, z: 0.50000006}
   m_Children: []
   m_Father: {fileID: 38027724}
@@ -78943,7 +79208,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8296172667604997318}
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -333.38, y: -2.54, z: 0.96}
+  m_LocalPosition: {x: -333.38, y: -2.54, z: 2.18}
   m_LocalScale: {x: 0.5000001, y: 0.50000006, z: 0.50000006}
   m_Children: []
   m_Father: {fileID: 38027724}
@@ -83944,8 +84209,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LegRotationObject: {fileID: 0}
+  LegIdleObject: {fileID: 0}
   joystick: {fileID: 0}
   LegAnimator: {fileID: 0}
+  LegIdleAnimator: {fileID: 0}
   veloRate: 2500
   addForceRate: 25000
   TouchField: {fileID: 0}
