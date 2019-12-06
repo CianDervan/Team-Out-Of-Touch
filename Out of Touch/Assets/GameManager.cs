@@ -90,6 +90,11 @@ public class GameManager : MonoBehaviour
        Time.timeScale = 1f;
        Score.canCount = true;
    }
+   
+   public void ResumeTime()
+   {
+       Score.canCount = true;
+   }
 
    public void Restart()
    {

@@ -519,10 +519,12 @@ public class KnowGrab : MonoBehaviour
     
     IEnumerator ShowAndHide( Image go, float delay )
     {
+       
         go.enabled = (true);
         myAudio.Play ();
         yield return new WaitForSeconds(delay);
         go.enabled = (false);
+        
     }
     
     IEnumerator ShowAndHideTwo( RawImage go, float delay )

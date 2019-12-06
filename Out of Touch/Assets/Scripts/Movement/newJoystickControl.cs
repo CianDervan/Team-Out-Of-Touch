@@ -118,10 +118,12 @@ public class newJoystickControl : MonoBehaviour
     }*/
 
     public GameObject LegRotationObject;
+    public GameObject LegIdleObject;
     public Joystick joystick;
     //public Joybutton joybutton;
 
     public Animator LegAnimator;
+    public Animator LegIdleAnimator;
 
     public float veloRate = 2500f;
     public float addForceRate = 25000;
@@ -159,6 +161,7 @@ public class newJoystickControl : MonoBehaviour
         // }
 
         LegRotationObject.SetActive(false);
+        LegIdleObject.SetActive(true);
     }
 
     void FixedUpdate()
@@ -184,6 +187,7 @@ public class newJoystickControl : MonoBehaviour
         if (rightDirection.x != 0 || rightDirection.y != 0)
         {
             LegRotationObject.SetActive(true);
+            LegIdleObject.SetActive(false);
 
             //LegAnim.SetBool("IsWalking", StartWalk);
 
@@ -210,6 +214,7 @@ public class newJoystickControl : MonoBehaviour
         else
         {
             LegRotationObject.SetActive(false);
+            LegIdleObject.SetActive(true);
 
             //LegAnim.SetBool("IsWalking", StartWalk);
 

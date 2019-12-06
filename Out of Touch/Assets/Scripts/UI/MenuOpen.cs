@@ -11,6 +11,7 @@ public class MenuOpen : MonoBehaviour
    {
       if (MenuPanel != null)
       {
+         Score.canCount = false;
          Animator anim = MenuPanel.GetComponent<Animator>();
          if (anim != null)
          {

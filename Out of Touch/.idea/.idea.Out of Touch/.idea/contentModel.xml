@@ -151,6 +151,7 @@
             <e p="HideAndReplace.cs" t="Include" />
             <e p="KnowGrab.cs" t="Include" />
             <e p="MatchRightHand.cs" t="Include" />
+            <e p="PlatformParent.cs" t="Include" />
             <e p="RagdollControl.cs" t="Include" />
             <e p="RaiseHands.cs" t="Include" />
             <e p="rotAround.cs" t="Include" />
@@ -200,6 +201,7 @@
           <e p="UI" t="Include">
             <e p="ColourLerp.cs" t="Include" />
             <e p="ControlMenuToggle.cs" t="Include" />
+            <e p="CountInTimer.cs" t="Include" />
             <e p="FixedButton.cs" t="Include" />
             <e p="FixedTouchField.cs" t="Include" />
             <e p="MenuOpen.cs" t="Include" />
@@ -526,6 +528,9 @@
               <e p="LiberationSans - OFL.txt" t="Include" />
             </e>
             <e p="Resources" t="Include">
+              <e p="Fonts &amp; Materials" t="Include">
+                <e p="quarrystone.txt" t="Include" />
+              </e>
               <e p="LineBreaking Following Characters.txt" t="Include" />
               <e p="LineBreaking Leading Characters.txt" t="Include" />
               <e p="Shaders" t="Include">
