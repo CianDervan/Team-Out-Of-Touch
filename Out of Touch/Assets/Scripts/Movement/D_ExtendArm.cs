@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class D_ExtendArm : MonoBehaviour
 {
-    public bool WantsToGrab = false;
+    private bool WantsToGrab = false;
 
     public float ArmForce = 100f;
     public Rigidbody PlayerHand;
     public Transform R_Object;
+
+    public GameObject RightCollider;
 
     // Start is called before the first frame update
     void Start()
@@ -16,8 +18,14 @@ public class D_ExtendArm : MonoBehaviour
         float PlayerDist = Vector3.Distance(R_Object.position, transform.position);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ToggleGrab()
+    {
+        WantsToGrab = !WantsToGrab;
+    }
+
+    // /*
+
+    void ExtendArms()
     {
         if (WantsToGrab == true)
         {
@@ -26,6 +34,17 @@ public class D_ExtendArm : MonoBehaviour
             transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
 
             PlayerHand.AddForce(direction * ArmForce);
+
+
+            RightCollider.SetActive(true);
         }
+    }
+
+    //  */
+
+    // Update is called once per frame
+    void Update()
+    {
+        ExtendArms();
     }
 }

@@ -5079,10 +5079,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0565eff59b272e458fe78fe7c4f2b51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WantsToGrab: 1
   ArmForce: 100
   PlayerHand: {fileID: 410149735}
   R_Object: {fileID: 832949757}
+  RightCollider: {fileID: 132724049}
 --- !u!1001 &132929701
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10810,10 +10810,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0565eff59b272e458fe78fe7c4f2b51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WantsToGrab: 0
   ArmForce: 100
   PlayerHand: {fileID: 348636417}
   R_Object: {fileID: 832949757}
+  RightCollider: {fileID: 0}
 --- !u!1001 &349092064
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12179,10 +12179,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0565eff59b272e458fe78fe7c4f2b51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WantsToGrab: 0
   ArmForce: 100
   PlayerHand: {fileID: 410149735}
   R_Object: {fileID: 832949757}
+  RightCollider: {fileID: 0}
 --- !u!1 &416678646
 GameObject:
   m_ObjectHideFlags: 0
@@ -19146,7 +19146,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &666318224
 Transform:
   m_ObjectHideFlags: 0
@@ -19173,10 +19173,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0565eff59b272e458fe78fe7c4f2b51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WantsToGrab: 1
   ArmForce: 100
   PlayerHand: {fileID: 348636417}
   R_Object: {fileID: 832949757}
+  RightCollider: {fileID: 666318223}
 --- !u!114 &666318226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32270,8 +32270,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 126157986}
-        m_MethodName: 
+      - m_Target: {fileID: 666318225}
+        m_MethodName: ToggleGrab
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -32281,41 +32281,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 126157986}
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 126157986}
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 126157990}
-        m_MethodName: DoToggle
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 126157988}
-        m_MethodName: BreakTheChain
+      - m_Target: {fileID: 132724056}
+        m_MethodName: ToggleGrab
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -66434,6 +66401,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1130073002, guid: 7095b9afab61ba148aa90d540e514bcc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1130073002, guid: 7095b9afab61ba148aa90d540e514bcc, type: 3}
+      propertyPath: m_Name
+      value: SphereRight
+      objectReference: {fileID: 0}
     - target: {fileID: 7910433260684897448, guid: 7095b9afab61ba148aa90d540e514bcc,
         type: 3}
       propertyPath: m_CollisionDetection
@@ -67023,14 +66998,6 @@ PrefabInstance:
     - target: {fileID: 1130073004, guid: 7095b9afab61ba148aa90d540e514bcc, type: 3}
       propertyPath: m_Enabled
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1130073002, guid: 7095b9afab61ba148aa90d540e514bcc, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1130073002, guid: 7095b9afab61ba148aa90d540e514bcc, type: 3}
-      propertyPath: m_Name
-      value: SphereRight
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1300652655, guid: 7095b9afab61ba148aa90d540e514bcc, type: 3}
