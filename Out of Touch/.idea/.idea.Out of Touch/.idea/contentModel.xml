@@ -175,6 +175,7 @@
             <e p="ResumeButton.cs" t="Include" />
           </e>
           <e p="Movement" t="Include">
+            <e p="D_ExtendArm.cs" t="Include" />
             <e p="DarraghCharacterMovementScript.cs" t="Include" />
             <e p="DarraghRagdollMovementControl.cs" t="Include" />
             <e p="JointFollowAnimRot.cs" t="Include" />
