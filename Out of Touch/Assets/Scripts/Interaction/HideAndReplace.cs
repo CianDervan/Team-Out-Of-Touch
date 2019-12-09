@@ -24,7 +24,7 @@ public class HideAndReplace : MonoBehaviour
                     || (other.gameObject.CompareTag("Suction") && thisObject.gameObject.CompareTag("Suction Marker")))))
         {
             Score.boxesCollected += 1;
-            FindObjectOfType<RaiseHands>().DoToggle();
+//            FindObjectOfType<RaiseHands>().DoToggle();
             theHips.GetComponent<Rigidbody>().freezeRotation = false;
             theTorso.GetComponent<Rigidbody>().freezeRotation = false;
             Destroy(other.GetComponent<FixedJoint>());

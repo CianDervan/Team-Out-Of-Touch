@@ -148,6 +148,7 @@
             <e p="Catapult.cs" t="Include" />
             <e p="changeParent.cs" t="Include" />
             <e p="CleanGrab.cs" t="Include" />
+            <e p="GNLG.cs" t="Include" />
             <e p="HideAndReplace.cs" t="Include" />
             <e p="KnowGrab.cs" t="Include" />
             <e p="MatchRightHand.cs" t="Include" />
