@@ -9,6 +9,8 @@ public class CountInTimer : MonoBehaviour
     public float currentTime = 0f;
     public float startingTime = 3f;
 
+    public GameObject thisObject;
+    
     public TextMeshProUGUI timerText;
     
     [SerializeField] private TextMeshProUGUI countInText;
@@ -16,10 +18,11 @@ public class CountInTimer : MonoBehaviour
     
     void Awake()
     {
-        Score.canCount = false;
+        //Score.canCount = false;
     }
     void Start()
     {
+        Score.canCount = false;
         currentTime = startingTime;
     }
 
@@ -49,6 +52,7 @@ public class CountInTimer : MonoBehaviour
             countInText.text = currentTime.ToString("GO!");
             countInText.enabled = false;
             Score.canCount = true;
+            thisObject.SetActive(false);
         }
     }
 }

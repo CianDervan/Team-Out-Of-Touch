@@ -93,6 +93,8 @@ public class GameManager : MonoBehaviour
    
    public void ResumeTime()
    {
+      // Invoke("ResumeTime", restartDelay);
+       Score.timer += 2.0f;
        Score.canCount = true;
    }
 
@@ -109,6 +111,13 @@ public class GameManager : MonoBehaviour
    }
 
    public void MenuMain()
+   {
+       Score.canCount = false;
+       //ControlsCanvas.SetActive(false);
+       //beginCamera.enabled = true;
+
+   }
+   public void PauseTime()
    {
        Score.canCount = false;
        //ControlsCanvas.SetActive(false);

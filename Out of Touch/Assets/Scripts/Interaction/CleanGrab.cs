@@ -99,6 +99,7 @@ public class CleanGrab : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Rooftop"))
         {
+            //Debug.Log("colliding!");
             objectToGrab = other.gameObject;
             //objectToGrab.GetComponent<Renderer>().material.color = Color.green;
             //originalColor = objectToGrab.gameObject.GetComponent<Renderer>().material.color;
@@ -107,9 +108,9 @@ public class CleanGrab : MonoBehaviour
             {
                // originalColor = objectToGrab.gameObject.GetComponent<Renderer>().material.color;
                
-                //if (!carrying && iHaveNotBeenCollectedRooftop)//(!carrying)
-                    if (!carrying && iHaveNotBeenCollectedRooftop && iHaveNotBeenCollectedCatchment 
-                        && iHaveNotBeenCollectedStorage && iHaveNotBeenCollectedSuction)
+                if (!carrying && iHaveNotBeenCollectedRooftop)//(!carrying)
+                    //if (!carrying && iHaveNotBeenCollectedRooftop && iHaveNotBeenCollectedCatchment 
+                      //  && iHaveNotBeenCollectedStorage && iHaveNotBeenCollectedSuction)
                 {
                     //objectToGrab.GetComponent<Renderer>().material.color = Color.green;
                     objectToGrab.GetComponent<MeshRenderer>().material.SetColor("_BaseColor", Color.green);
@@ -170,11 +171,11 @@ public class CleanGrab : MonoBehaviour
                    }
                    
                    carrying = true;
-                   KMenuObject.GetComponent<MenuOpen>().OpenMenu();
+                  // KMenuObject.GetComponent<MenuOpen>().OpenMenu();
                    iHaveNotBeenCollectedRooftop = false;
-                   iHaveNotBeenCollectedCatchment = false;
-                   iHaveNotBeenCollectedStorage = false;
-                   iHaveNotBeenCollectedSuction = false;
+                   //iHaveNotBeenCollectedCatchment = false;
+                  // iHaveNotBeenCollectedStorage = false;
+                  // iHaveNotBeenCollectedSuction = false;
                 }
                else if (!carrying && !iHaveNotBeenCollectedRooftop)
                 {
@@ -192,11 +193,11 @@ public class CleanGrab : MonoBehaviour
                     objectToGrab.GetComponent<Rigidbody>().AddForce(myRb.velocity - objectToGrab.GetComponent<Rigidbody>().velocity
                                                                     / (objectToGrab.GetComponent<Rigidbody>().mass * Time.deltaTime));
                     
-                    showImage = true;
+                   /* showImage = true;
                     if (showImage)
                     {
                         StartCoroutine(ShowAndHide(imageToShow, 5.0f));
-                    }
+                    }*/
                     
                     carrying = true;
                 }
@@ -210,9 +211,9 @@ public class CleanGrab : MonoBehaviour
 
             if (objectToGrab != null)
             {
-               // if (!carrying && iHaveNotBeenCollectedStorage)//(!carrying)
-               if (!carrying && iHaveNotBeenCollectedStorage && iHaveNotBeenCollectedRooftop 
-                   && iHaveNotBeenCollectedCatchment && iHaveNotBeenCollectedSuction)
+               if (!carrying && iHaveNotBeenCollectedStorage)//(!carrying)
+               //if (!carrying && iHaveNotBeenCollectedStorage && iHaveNotBeenCollectedRooftop 
+                  // && iHaveNotBeenCollectedCatchment && iHaveNotBeenCollectedSuction)
                 {
                     FixedJoint grabJoint = objectToGrab.AddComponent<FixedJoint>();
                     myHips.GetComponent<Rigidbody>().freezeRotation = true;
@@ -244,11 +245,11 @@ public class CleanGrab : MonoBehaviour
                     }
                     carrying = true;
                     
-                    KMenuObject.GetComponent<MenuOpen>().OpenMenu();
+                    //KMenuObject.GetComponent<MenuOpen>().OpenMenu();
                     iHaveNotBeenCollectedStorage = false;
-                    iHaveNotBeenCollectedRooftop = false;
-                    iHaveNotBeenCollectedCatchment = false;
-                    iHaveNotBeenCollectedSuction = false;
+                    //iHaveNotBeenCollectedRooftop = false;
+                   // iHaveNotBeenCollectedCatchment = false;
+                   // iHaveNotBeenCollectedSuction = false;
                 }
                 
                 else if (!carrying && !iHaveNotBeenCollectedStorage)
@@ -266,12 +267,12 @@ public class CleanGrab : MonoBehaviour
                     objectToGrab.GetComponent<Rigidbody>().freezeRotation = true;
                     objectToGrab.GetComponent<Rigidbody>().AddForce(myRb.velocity - objectToGrab.GetComponent<Rigidbody>().velocity
                                                                     / (objectToGrab.GetComponent<Rigidbody>().mass * Time.deltaTime));
-                    showImage = true;
+                   /* showImage = true;
                     if (showImage)
                     {
                         StartCoroutine(ShowAndHide(imageToShow, 5.0f));
                     }
-                    carrying = true;
+                    carrying = true;*/
                     
                 }
             }
@@ -284,9 +285,9 @@ public class CleanGrab : MonoBehaviour
 
             if (objectToGrab != null)
             {
-                if (!carrying && iHaveNotBeenCollectedStorage && iHaveNotBeenCollectedRooftop 
-                    && iHaveNotBeenCollectedCatchment && iHaveNotBeenCollectedSuction)
-                //if (!carrying && iHaveNotBeenCollectedCatchment)//(!carrying)
+                //if (!carrying && iHaveNotBeenCollectedStorage && iHaveNotBeenCollectedRooftop 
+                   // && iHaveNotBeenCollectedCatchment && iHaveNotBeenCollectedSuction)
+                if (!carrying && iHaveNotBeenCollectedCatchment)//(!carrying)
                 {
                     FixedJoint grabJoint = objectToGrab.AddComponent<FixedJoint>();
                     myHips.GetComponent<Rigidbody>().freezeRotation = true;
@@ -318,11 +319,11 @@ public class CleanGrab : MonoBehaviour
                         flyOverThreeButton.SetActive(true);
                     }
                     carrying = true;
-                    KMenuObject.GetComponent<MenuOpen>().OpenMenu();
-                    iHaveNotBeenCollectedRooftop = false;
+                   // KMenuObject.GetComponent<MenuOpen>().OpenMenu();
+                   // iHaveNotBeenCollectedRooftop = false;
                     iHaveNotBeenCollectedCatchment = false;
-                    iHaveNotBeenCollectedStorage = false;
-                    iHaveNotBeenCollectedSuction = false;
+                   // iHaveNotBeenCollectedStorage = false;
+                   // iHaveNotBeenCollectedSuction = false;
                 }
                 
                 else if (!carrying && !iHaveNotBeenCollectedCatchment)
@@ -340,13 +341,13 @@ public class CleanGrab : MonoBehaviour
                     objectToGrab.GetComponent<Rigidbody>().freezeRotation = true;
                     objectToGrab.GetComponent<Rigidbody>().AddForce(myRb.velocity - objectToGrab.GetComponent<Rigidbody>().velocity
                                                                     / (objectToGrab.GetComponent<Rigidbody>().mass * Time.deltaTime));
-                    showImage = true;
+                    /*showImage = true;
                     if (showImage)
                     {
                         StartCoroutine(ShowAndHide(imageToShow, 5.0f));
                     }
                     
-                    carrying = true;
+                    carrying = true;*/
                     
                 }
             }
@@ -359,9 +360,9 @@ public class CleanGrab : MonoBehaviour
 
             if (objectToGrab != null)
             {
-                if (!carrying && iHaveNotBeenCollectedStorage && iHaveNotBeenCollectedRooftop 
-                    && iHaveNotBeenCollectedCatchment && iHaveNotBeenCollectedSuction)
-                //if (!carrying && iHaveNotBeenCollectedSuction)//(!carrying)
+               // if (!carrying && iHaveNotBeenCollectedStorage && iHaveNotBeenCollectedRooftop 
+                   // && iHaveNotBeenCollectedCatchment && iHaveNotBeenCollectedSuction)
+                if (!carrying && iHaveNotBeenCollectedSuction)//(!carrying)
                 {
                     FixedJoint grabJoint = objectToGrab.AddComponent<FixedJoint>();
                     myHips.GetComponent<Rigidbody>().freezeRotation = true;
@@ -393,10 +394,10 @@ public class CleanGrab : MonoBehaviour
                         flyOverFourButton.SetActive(true);
                     }
                     carrying = true;
-                    KMenuObject.GetComponent<MenuOpen>().OpenMenu();
-                    iHaveNotBeenCollectedRooftop = false;
-                    iHaveNotBeenCollectedCatchment = false;
-                    iHaveNotBeenCollectedStorage = false;
+                   // KMenuObject.GetComponent<MenuOpen>().OpenMenu();
+                    //iHaveNotBeenCollectedRooftop = false;
+                   // iHaveNotBeenCollectedCatchment = false;
+                   // iHaveNotBeenCollectedStorage = false;
                     iHaveNotBeenCollectedSuction = false;
                 }
                 
@@ -415,11 +416,11 @@ public class CleanGrab : MonoBehaviour
                     objectToGrab.GetComponent<Rigidbody>().freezeRotation = true;
                     objectToGrab.GetComponent<Rigidbody>().AddForce(myRb.velocity - objectToGrab.GetComponent<Rigidbody>().velocity
                                                                     / (objectToGrab.GetComponent<Rigidbody>().mass * Time.deltaTime));
-                    showImage = true;
+                    /*showImage = true;
                     if (showImage)
                     {
                         StartCoroutine(ShowAndHide(imageToShow, 5.0f));
-                    }
+                    }*/
                     
                     carrying = true;
                 }

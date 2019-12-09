@@ -9,10 +9,10 @@ public class MenuOpen : MonoBehaviour
 
    public void OpenMenu()
    {
-      Score.canCount = false;
+      //Score.canCount = false;
       if (MenuPanel != null)
       {
-         //Score.canCount = false;
+         Score.canCount = false;
          Animator anim = MenuPanel.GetComponent<Animator>();
          if (anim != null)
          {

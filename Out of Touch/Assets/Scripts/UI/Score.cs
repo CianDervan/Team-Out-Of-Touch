@@ -6,20 +6,6 @@ using UnityEngine.UI;
 
 public class Score : MonoBehaviour
 {
-   /* public float elapsedTime; // The amount of time that has elapsed.
-   // public static int points; // The player's current points.
-    
-    public float timeSpent; // How long did it take player to complete level
-    public float levelMaxTime = 180; // The player has to complete the level within this time
-    public float levelScore = 10; // The player will be awarded of 10 points per remaining second
-
-// Compute the final score
-   // score = Math.max(0, levelMaxTime - timeSpent) * levelScore; // 400 points
-
-   // [SerializeField] private Text uiText;*/
-   
-   
-   
     [SerializeField] private TextMeshProUGUI timerText;
     [SerializeField] private TextMeshProUGUI scoreText;
     [SerializeField] private float mainTimer;
@@ -97,21 +83,4 @@ public class Score : MonoBehaviour
         scoreText.fontSize = 36;
         scoreText.color = Color.white;
     }
- 
-   /* void AssignPoints ()
-    {
-        // Add points based on how much time has elapsed.
-        // The player gets 2 points for finishing at or under 2 seconds,
-        // 1 point between 2 and 10 seconds, and no points above ten seconds.
-        if (bonusTimer <= 2f)
-        {
-            points += 2;
-        }
-        else if (bonusTimer > 2f && bonusTimer <= 10f)
-        {
-            points += 1;
-        }
-    }*/
-
-
 }
